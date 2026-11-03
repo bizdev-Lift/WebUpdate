@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FedEx Ground Shipping Cost Calculator (2026) | Lift Commerce</title>
+<meta name="description" content="Price a large box the way FedEx bills it: 2026 Ground list rates, dimensional weight, additional handling, oversize, peak and fuel surcharges, plus what negotiated terms save.">
+<link rel="canonical" href="https://www.liftcommerce.io/shipping-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lift Commerce">
+<meta property="og:title" content="FedEx Ground Shipping Cost Calculator (2026) | Lift Commerce">
+<meta property="og:description" content="Price a large box the way FedEx bills it: 2026 Ground list rates, dimensional weight, additional handling, oversize, peak and fuel surcharges, plus what negotiated terms save.">
+<meta property="og:url" content="https://www.liftcommerce.io/shipping-calculator">
+<meta property="og:image" content="https://www.liftcommerce.io/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lift Commerce: stop overpaying on every box you ship">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233F; --ink-2:#1E3355; --teal:#0088B0; --teal-dk:#006786;
+  --teal-lt:#62C5EE; --tint:#E9F8FF;
+  --paper:#fff; --mist:#F5F4F2; --line:#D7D3D3; --body:#444141; --muted:#605D5D;
+  --serif:"Source Serif 4",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --wrap:1180px; --r:2px; --sh:0 2px 4px rgba(45,43,43,.06),0 12px 32px rgba(45,43,43,.16);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;font-family:var(--serif);color:var(--body);
+     background:var(--paper);font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;border:0}
+a{color:var(--teal-dk)}
+a:hover{text-decoration:underline}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);margin:0;line-height:1.12;letter-spacing:-.015em}
+h1{font-size:clamp(2rem,3.7vw,3rem);font-weight:600}
+h2{font-size:clamp(1.55rem,2.8vw,2.2rem);font-weight:600}
+h3{font-size:1.2rem;font-weight:600}
+h4{font-size:1.02rem;font-weight:600}
+p{margin:0 0 1.1rem}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--mono);font-size:.71rem;font-weight:600;letter-spacing:.16em;
+         text-transform:uppercase;color:var(--teal-dk);margin:0 0 .7rem}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.skip:focus{position:fixed;left:16px;top:12px;width:auto;height:auto;clip-path:none;z-index:999;
+  background:var(--teal);color:#fff;padding:10px 18px;border-radius:var(--r);font-weight:600}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:1rem;
+     padding:.8rem 1.5rem;border-radius:var(--r);border:2px solid transparent;text-decoration:none;
+     transition:background .16s,transform .16s,box-shadow .16s}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 4px 14px rgba(0,136,176,.3)}
+.btn-primary:hover{background:var(--teal-dk)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-2)}
+
+/* header */
+.topbar{background:var(--ink);color:#c3ccda;font-size:.82rem;padding:.45rem 0}
+.topbar .wrap{display:flex;justify-content:flex-end;gap:1.6rem;flex-wrap:wrap}
+.topbar a{color:#c3ccda;text-decoration:none}
+.topbar a:hover{color:var(--teal-lt)}
+.site-head{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:1rem;min-height:76px}
+.brand-fallback{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:var(--ink);
+                letter-spacing:-.02em;white-space:nowrap;text-decoration:none}
+.brand-fallback b{color:var(--teal)}
+.nav{margin-left:auto;display:flex;align-items:center;gap:.15rem}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:.3rem;background:none;border:0;padding:.7rem .62rem;
+  font-size:1.02rem;font-family:Arial,Helvetica,sans-serif;font-weight:600;color:var(--ink);
+  border-radius:var(--r);white-space:nowrap;text-decoration:none}
+.nav-link:hover{color:var(--teal-dk);background:var(--tint);text-decoration:none}
+.nav-link.is-cta{background:var(--teal);color:#fff;margin-left:.5rem;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+.nav-link.is-cta:hover{background:var(--teal-dk);color:#fff}
+.nav-link[aria-current="page"]{color:var(--teal-dk);box-shadow:inset 0 -2px 0 var(--teal)}
+.panel a[aria-current="page"]{background:var(--tint);color:var(--teal-dk);font-weight:600}
+.caret{width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+       transform:rotate(45deg) translateY(-2px);transition:transform .18s}
+.nav-item[data-open="true"] .caret{transform:rotate(-135deg) translateY(-2px)}
+.nav-item[data-open="true"] .nav-link{color:var(--teal-dk);background:var(--tint)}
+.panel{position:absolute;top:calc(100% + 8px);left:0;min-width:300px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:.55rem;
+  opacity:0;visibility:hidden;transform:translateY(-8px);list-style:none;margin:0;
+  transition:opacity .18s,transform .18s,visibility .18s}
+.panel.cols{min-width:540px;display:grid;grid-template-columns:1fr 1fr;gap:.1rem}
+.nav-item[data-open="true"] .panel{opacity:1;visibility:visible;transform:translateY(0)}
+.panel a{display:block;padding:.6rem .8rem;border-radius:var(--r);color:var(--ink);
+         font-size:.96rem;line-height:1.35;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+.panel a:hover{background:var(--tint);color:var(--teal-dk)}
+.panel a small{display:block;color:var(--muted);font-size:.8rem;margin-top:.1rem;font-weight:400}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);
+        border-radius:var(--r);padding:.55rem .7rem}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0}
+
+/* page hero */
+.phero{background:linear-gradient(150deg,var(--ink) 0%,var(--ink-2) 70%,#254063 100%);
+       color:#fff;position:relative;overflow:hidden}
+.phero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(135deg,rgba(98,197,238,.06) 0 2px,transparent 2px 22px)}
+.phero-in{position:relative;z-index:2;padding-top:3.4rem;padding-bottom:3rem;display:grid;grid-template-columns:minmax(0,62ch)}
+.phero.split .phero-in{display:grid;grid-template-columns:1.1fr .9fr;
+                       gap:3rem;align-items:center}
+.phero h1{color:#fff}
+.phero h1 em{font-style:italic;color:var(--teal-lt);font-weight:400}
+.phero p{color:#c9dced;font-size:1.1rem;margin:1.1rem 0 0}
+.phero .eyebrow{color:var(--teal-lt)}
+.phero-cta{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.8rem}
+.crumb{position:relative;z-index:2;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+       color:#8ba7bf;padding-top:1.4rem}
+.crumb a{color:#8ba7bf;text-decoration:none}
+.crumb a:hover{color:var(--teal-lt)}
+
+/* sections */
+.sec{padding:4rem 0}
+.sec.mist{background:var(--mist)}
+.sec-head{max-width:64ch;margin-bottom:2.2rem}
+.sec-head p{font-size:1.05rem;margin-top:.8rem}
+.prose{max-width:68ch}
+.lede{font-size:1.15rem;color:var(--ink);line-height:1.6}
+
+.grid{display:grid;gap:1.3rem}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;
+      color:var(--body)}
+.card.tealtop{border-top:3px solid var(--teal)}
+.card h3{margin:0 0 .6rem}
+.card p:last-child{margin-bottom:0}
+.card .num{font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--teal);
+           letter-spacing:.08em;display:block;margin-bottom:.5rem}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:1.1rem;
+          padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:.82rem;
+  font-weight:600;color:var(--teal);padding-top:.28rem}
+.steps h3{margin:0 0 .35rem}
+.steps p{margin:0;font-size:.98rem}
+
+.spec{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1.2rem}
+.spec caption{text-align:left;font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;
+              text-transform:uppercase;color:var(--muted);padding-bottom:.6rem}
+.spec th,.spec td{padding:.7rem .6rem;border-bottom:1px solid var(--line);text-align:left;
+                  vertical-align:top;color:var(--body)}
+.spec thead th{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted);
+               text-transform:uppercase;font-weight:600}
+.spec td.n,.spec th.n{text-align:right;font-family:var(--mono);font-weight:600;color:var(--ink);
+                      white-space:nowrap}
+.spec tbody tr:hover{background:var(--tint)}
+.tbl-scroll{overflow-x:auto}
+
+.callout{background:var(--tint);border-left:3px solid var(--teal);border-radius:0 var(--r) var(--r) 0;
+         padding:1.3rem 1.5rem;margin:1.6rem 0;color:var(--body)}
+.callout p:last-child{margin-bottom:0}
+.callout h3{margin:0 0 .5rem;font-size:1.05rem}
+
+.linkrow{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid var(--line);
+      border-radius:var(--r);padding:.5rem .9rem;font-size:.92rem;color:var(--ink);text-decoration:none}
+.chip:hover{border-color:var(--teal);color:var(--teal-dk);text-decoration:none}
+
+/* photo slots — replace the div with <img src="..." alt="..."> when art is supplied */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.6rem}
+.shot{position:relative;aspect-ratio:4/3;border:1px dashed var(--line);border-radius:var(--r);
+  background:var(--mist);display:grid;place-items:center;text-align:center;padding:1rem}
+.shot span{font-family:var(--mono);font-size:.72rem;line-height:1.5;color:var(--muted)}
+.shot span b{display:block;color:var(--ink);font-family:var(--serif);font-size:.95rem;
+             font-weight:600;margin-bottom:.3rem}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+
+.cta-band{background:var(--teal);padding:3rem 0}
+.cta-in{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.cta-in h2{color:#fff;margin:0 0 .4rem}
+.cta-in p{color:#dcf0f8;margin:0;max-width:48ch}
+
+/* footer */
+.site-foot{background:var(--ink);color:#a9c2d6;padding:3.2rem 0 1.5rem;font-size:.92rem}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1.1fr 1fr 1fr;gap:2rem}
+.site-foot h4{color:#fff;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+              margin:0 0 1rem;font-weight:600}
+.site-foot ul{list-style:none;margin:0;padding:0}
+.site-foot li{margin-bottom:.5rem}
+.site-foot a{font-family:Arial,Helvetica,sans-serif;color:#a9c2d6;text-decoration:none}
+.site-foot a:hover{color:var(--teal-lt)}
+.site-foot a[aria-current="page"]{color:#fff}
+.site-foot .brand-fallback{color:#fff}
+.f-nap{font-style:normal;line-height:1.85}
+.f-nap a{color:#fff}
+.f-brand img{height:56px;margin-bottom:1rem}
+.f-pay{display:flex;gap:.7rem;align-items:center;margin-top:1.2rem;flex-wrap:wrap}
+.f-pay img{height:30px;width:auto;opacity:.85;background:#fff;border-radius:4px;padding:3px 5px}
+.f-bot{border-top:1px solid rgba(255,255,255,.13);margin-top:2.4rem;padding-top:1.2rem;
+       display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem}
+
+@media(max-width:1100px){
+  .burger{display:block}
+  .nav{position:fixed;inset:76px 0 auto;background:#fff;flex-direction:column;align-items:stretch;
+    gap:0;padding:.7rem 20px 1.4rem;border-bottom:1px solid var(--line);
+    max-height:calc(100vh - 76px);overflow-y:auto;display:none;box-shadow:var(--sh)}
+  .nav.open{display:flex}
+  .nav-link{width:100%;justify-content:space-between;font-size:1.1rem;padding:.85rem .3rem;
+            border-bottom:1px solid var(--line);border-radius:0}
+  .nav-link.is-cta{margin:.8rem 0 0;justify-content:center;border-bottom:0;border-radius:var(--r)}
+  .panel,.panel.cols{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+    border:0;border-radius:0;min-width:0;padding:.2rem 0 .6rem .8rem;display:none;
+    grid-template-columns:1fr;background:var(--mist)}
+  .nav-item[data-open="true"] .panel{display:block}
+  .nav-item[data-open="true"] .panel.cols{display:grid}
+  .f-grid{grid-template-columns:1fr 1fr 1fr}
+  .f-brand{grid-column:1 / -1}
+}
+@media(max-width:900px){
+  .phero.split .phero-in{grid-template-columns:1fr;gap:2rem}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .g2,.g4,.shots{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .sec{padding:2.8rem 0}
+}
+@media(max-width:400px){ .wrap{padding:0 16px} }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;
+  animation:none!important;scroll-behavior:auto!important}}
+
+.calc{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);
+      padding:0;overflow:hidden;margin-top:2rem}
+.calc-grid{display:grid;grid-template-columns:340px 1fr}
+.calc-grid>*{min-width:0}
+.calc-in{padding:1.6rem;border-right:1px solid var(--line)}
+.calc-out{padding:1.6rem;background:var(--ink);color:#fff}
+.calc-in h3,.calc-out h3{margin:0 0 1rem;font-size:1.05rem}
+.calc-out h3{color:#fff}
+.field{margin-bottom:1rem}
+.field label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;font-weight:600}
+.field input[type=number],.field select{width:100%;padding:.6rem .7rem;border:1.5px solid var(--line);
+  border-radius:var(--r);font-family:var(--mono);font-size:.95rem;font-weight:600;
+  color:var(--ink);background:#fff}
+.field input:focus,.field select:focus{border-color:var(--teal);outline:none;
+  box-shadow:0 0 0 3px rgba(0,136,176,.15)}
+.field input[type=range]{width:100%}
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.hint{font-size:.75rem;color:var(--muted);margin:.3rem 0 0;line-height:1.45}
+.chk{display:flex;align-items:flex-start;gap:.5rem;font-size:.86rem;color:var(--body);
+     margin-bottom:1rem;line-height:1.4}
+.chk input{margin-top:.25rem;flex:0 0 auto}
+
+.ledger{list-style:none;margin:0 0 1rem;padding:0;font-family:var(--mono);font-size:.86rem}
+.ledger li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+           padding:.6rem 0;border-bottom:1px dashed rgba(255,255,255,.16)}
+.ledger .lbl{color:#c4d8e8;font-weight:500}
+.ledger .lbl small{display:block;font-family:var(--serif);font-size:.74rem;color:#89a5bd;
+                   margin-top:.15rem;line-height:1.4}
+.ledger .amt{font-weight:600;color:#fff;white-space:nowrap}
+.ledger .amt.zero{color:#5f7f9a}
+.ledger .amt.hit{color:var(--teal-lt)}
+.ledger .amt.pend{color:#9db6cc;font-size:.74rem;font-family:var(--serif);font-style:italic}
+.ledger li.total{border-bottom:0;border-top:2px solid var(--teal);margin-top:.3rem;padding-top:.9rem}
+.ledger li.total .lbl{color:#fff;font-family:var(--serif);font-size:1.1rem;font-weight:600}
+.ledger li.total .amt{font-size:1.5rem;color:var(--teal-lt)}
+.flag{display:inline-block;background:rgba(98,197,238,.18);color:var(--teal-lt);
+  font-family:var(--mono);font-size:.68rem;font-weight:600;padding:.14rem .45rem;
+  border-radius:var(--r);margin-left:.4rem}
+.saveline{background:rgba(98,197,238,.12);border-left:3px solid var(--teal-lt);
+  border-radius:0 var(--r) var(--r) 0;padding:.8rem 1rem;font-size:.88rem;color:#d8ecf6;
+  line-height:1.55}
+.saveline b{color:var(--teal-lt);font-family:var(--mono)}
+.calc-note{padding:.9rem 1.6rem;background:var(--mist);border-top:1px solid var(--line);
+           font-size:.78rem;color:var(--muted);line-height:1.5}
+@media(max-width:900px){ .calc-grid{grid-template-columns:1fr}
+  .calc-in{border-right:0;border-bottom:1px solid var(--line)} }
+@media(max-width:480px){ .dims{grid-template-columns:1fr 1fr} }
+
+/* divisor comparison */
+.divtable{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.82rem;margin-top:.6rem}
+.divtable th,.divtable td{padding:.5rem .4rem;border-bottom:1px solid rgba(255,255,255,.14);
+                          text-align:right;color:#dbe8f2}
+.divtable th{color:#89a5bd;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.divtable th:first-child,.divtable td:first-child{text-align:left}
+.divtable tr.cur td{background:rgba(98,197,238,.14);color:#fff;font-weight:600}
+.divtable tr.cur td:first-child{color:var(--teal-lt)}
+
+/* shipping calculator */
+.calc-in fieldset{border:0;margin:0 0 1.2rem;padding:0 0 .4rem;border-bottom:1px solid var(--line)}
+.calc-in fieldset:last-of-type{border-bottom:0}
+.calc-in legend{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.02rem;padding:0;margin:0 0 .8rem}
+.field input[type=date]{width:100%;padding:.55rem .7rem;border:1.5px solid var(--line);border-radius:var(--r);
+  font-family:var(--mono);font-size:.9rem;font-weight:600;color:var(--ink);background:#fff}
+.divrow{display:flex;gap:.4rem}
+.divrow input{flex:1 1 auto;min-width:0}
+.divchip{flex:0 0 auto;font-family:var(--mono);font-size:.8rem;font-weight:600;padding:0 .7rem;
+  border:1.5px solid var(--line);border-radius:var(--r);background:#fff;color:var(--ink);min-height:40px}
+.divchip:hover{border-color:var(--teal)}
+.divchip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.calc-btn{width:100%;justify-content:center}
+.calc-grid{grid-template-columns:380px 1fr}
+.calc-out{scroll-margin-top:90px}
+.calc-out.pulse .ledger li.total .amt{animation:pulse .7s ease}
+@keyframes pulse{0%{opacity:.25}100%{opacity:1}}
+.saveline a{color:var(--teal-lt)}
+.calc-cta{margin-top:1.6rem;padding:1.3rem 1.3rem 1.4rem;border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--r);background:rgba(255,255,255,.04);transition:background .3s,border-color .3s,box-shadow .3s}
+.calc-cta.is-on{background:rgba(0,136,176,.22);border-color:var(--teal-lt);box-shadow:0 0 0 3px rgba(98,197,238,.18)}
+.calc-cta .cta-k{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-lt);margin:0 0 .45rem}
+.calc-cta h3{color:#fff;font-size:1.25rem;margin:0 0 .6rem}
+.calc-cta p{color:#c4d8e8;font-size:.9rem;line-height:1.55}
+.cta-row{display:flex;flex-wrap:wrap;gap:.6rem}
+.sticky-total{display:none}
+@media(max-width:900px){
+  .calc-grid{grid-template-columns:1fr}
+  .sticky-total{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;justify-content:space-between;
+    align-items:center;gap:1rem;padding:.7rem 16px;background:var(--ink);color:#fff;font-family:var(--mono);
+    font-size:.85rem;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+  .sticky-total b{color:var(--teal-lt);font-size:1.05rem;margin-left:.4rem}
+  .sticky-total a{color:#fff;text-decoration:underline}
+  body{padding-bottom:52px}
+}
+.howto{padding-left:1.3rem}
+.howto li{margin-bottom:.8rem}
+.mt{margin-top:2.6rem}
+.faq{margin:1rem 0 2rem;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:.9rem 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--ink)}
+.faq details p{margin:.6rem 0 0}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.liftcommerce.io/"},
+    {"@type": "ListItem", "position": 2, "name": "Shipping Cost Calculator", "item": "https://www.liftcommerce.io/shipping-calculator"}
+   ]
+  },
+  {
+   "@type": "WebApplication",
+   "name": "FedEx Ground Shipping Cost Calculator",
+   "url": "https://www.liftcommerce.io/shipping-calculator",
+   "description": "Price a large box the way FedEx bills it: 2026 Ground list rates, dimensional weight, additional handling, oversize, peak and fuel surcharges, plus what negotiated terms save.",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "Any",
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+   "provider": {"@type": "Organization", "name": "Lift Commerce", "url": "https://www.liftcommerce.io/"}
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {"@type": "Question", "name": "What is the FedEx Ground minimum charge in 2026?",
+     "acceptedAnswer": {"@type": "Answer", "text": "$11.99, the published rate for a 1 lb package to Zone 2. Many agreements set a lower minimum, which matters if you ship a lot of small, light parcels."}},
+    {"@type": "Question", "name": "Can FedEx charge more than one additional handling surcharge on a box?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No. If a package qualifies on weight and dimension, FedEx charges the higher of the two. A 49 in box weighing 52 lb, for example, is charged the weight surcharge only."}},
+    {"@type": "Question", "name": "When do FedEx's 2026 peak surcharges apply?",
+     "acceptedAnswer": {"@type": "Answer", "text": "For additional handling and oversize packages, from Sept. 28, 2026 to Jan. 17, 2027. The holiday window, Nov. 23 to Dec. 27, carries the highest amounts."}},
+    {"@type": "Question", "name": "Is a better DIM divisor worth more than a bigger discount?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Often, for light, bulky boxes. The divisor lowers the weight every rate is looked up at, so it reduces the base rate before any percentage discount."}}
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="topbar"><div class="wrap">
+  <a href="tel:+12036016208">P: +1 (203) 601-6208</a>
+  <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a>
+  <a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Client Login</a>
+</div></div>
+
+<header class="site-head"><div class="wrap head-in">
+  <a class="brand-logo" href="/" aria-label="Lift Commerce home">
+    <img alt="Lift Commerce" style="height:46px;width:auto" src="assets/img/lift-commerce-logo.avif"
+      onerror="this.outerHTML='&lt;span class=\'brand-fallback\'&gt;Lift&lt;b&gt;Commerce&lt;/b&gt;&lt;/span&gt;'">
+  </a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span><span></span></button>
+
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false">Services <i class="caret"></i></button>
+      <ul class="panel">
+        <li><a href="/services/ltl-truckload">LTL and Truckload<small>Pallets, crates and heavy freight</small></a></li>
+        <li><a href="/services/shipping-software-integrations">Shipping Software and Integrations<small>Free multi-carrier platform, 32 connectors</small></a></li>
+        <li><a href="/services/ecommerce-shipping">E-Commerce Shipping<small>Rates, account management, claims support</small></a></li>
+        <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization<small>Invoice audit and agreement negotiation</small></a></li>
+      </ul>
+    </div>
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false">Industries <i class="caret"></i></button>
+      <ul class="panel cols">
+        <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+        <li><a href="/industries/home-goods">Home Goods</a></li>
+        <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+        <li><a href="/industries/apparel">Apparel</a></li>
+        <li><a href="/industries/medical">Medical</a></li>
+        <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+        <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+        <li><a href="/industries/electronics">Electronics</a></li>
+        <li><a href="/industries/cosmetics">Cosmetics</a></li>
+        <li><a href="/industries/3pl">3PL</a></li>
+      </ul>
+    </div>
+    <div class="nav-item" data-dd data-open="false">
+      <button class="nav-link" aria-expanded="false" aria-current="page">Resources <i class="caret"></i></button>
+      <ul class="panel">
+        <li><a href="/shipping-calculator" aria-current="page">Shipping Cost Calculator<small>Price a box with 2026 FedEx rates</small></a></li>
+        <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes<small>Every surcharge that hits an oversize parcel</small></a></li>
+        <li><a href="/resources/dimensional-weight">Dimensional Weight<small>How DIM factors work, with a calculator</small></a></li>
+        <li><a href="/resources/additional-handling">Additional Handling<small>Weight, length, girth and packaging triggers</small></a></li>
+        <li><a href="/resources/international-shipping">International Shipping<small>DDU vs DDP, brokerage and customs</small></a></li>
+      </ul>
+    </div>
+    <div class="nav-item"><a class="nav-link" href="/contact">Contact</a></div>
+    <div class="nav-item"><a class="nav-link" href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></div>
+    <div class="nav-item"><a class="nav-link is-cta" href="/shipping-scorecard">Shipping Scorecard</a></div>
+  </nav>
+</div></header>
+
+<main id="main">
+<section class="phero">
+<div class="wrap crumb"><a href="/">Home</a> <span aria-hidden="true">/</span> Shipping Cost Calculator</div>
+<div class="wrap phero-in">
+  <p class="eyebrow">Free tool</p>
+  <h1>FedEx Ground shipping cost calculator <em>for large boxes.</em></h1>
+  <p>Price a box the way FedEx bills it: 2026 published rates, dimensional weight, additional
+     handling, oversize, peak surcharges and this week's fuel surcharge. Then see what negotiated
+     terms do to the total.</p>
+  <div class="phero-cta">
+    <a class="btn btn-primary" href="#fxCalc">Price a box</a>
+    <a class="btn btn-ghost" href="/shipping-scorecard">Get a free rate analysis</a>
+  </div>
+</div></section>
+
+<section class="sec mist" aria-labelledby="calcH">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Calculator</p>
+    <h2 id="calcH">What one box really costs</h2>
+    <p>Enter a box you ship often. The total updates as you type; the sliders show what a better
+       agreement is worth.</p>
+  </div>
+
+  <div class="calc" id="fxCalc">
+    <div class="calc-grid">
+      <form class="calc-in" onsubmit="return false">
+        <fieldset>
+          <legend>The box</legend>
+          <div class="field">
+            <label for="zone">Destination zone</label>
+            <select id="zone">
+              <option value="2">Zone 2</option><option value="3">Zone 3</option>
+              <option value="4">Zone 4</option><option value="5" selected>Zone 5</option>
+              <option value="6">Zone 6</option><option value="7">Zone 7</option>
+              <option value="8">Zone 8</option>
+            </select>
+          </div>
+          <div class="field">
+            <label id="dimsL">Dimensions, L × W × H (inches)</label>
+            <div class="dims" role="group" aria-labelledby="dimsL">
+              <input id="len" type="number" inputmode="decimal" min="1" step="any" value="30" aria-label="Length in inches">
+              <input id="wid" type="number" inputmode="decimal" min="1" step="any" value="24" aria-label="Width in inches">
+              <input id="hei" type="number" inputmode="decimal" min="1" step="any" value="20" aria-label="Height in inches">
+            </div>
+          </div>
+          <div class="field">
+            <label for="wt">Actual weight (lbs)</label>
+            <input id="wt" type="number" inputmode="decimal" min="0.1" step="any" value="28">
+          </div>
+          <label class="chk"><input id="pkg" type="checkbox">
+            <span>Not fully encased in corrugated cardboard (wrapped, metal, wood, cylinders)</span></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your terms</legend>
+          <div class="field">
+            <label for="dim">DIM divisor</label>
+            <div class="divrow">
+              <input id="dim" type="number" inputmode="numeric" min="100" max="500" step="1" value="139">
+              <button type="button" class="divchip" data-div="139" aria-pressed="true">139</button>
+              <button type="button" class="divchip" data-div="166" aria-pressed="false">166</button>
+              <button type="button" class="divchip" data-div="225" aria-pressed="false">225</button>
+            </div>
+            <p class="hint">139 is FedEx's published divisor. A higher one lowers the weight every
+               charge is based on.</p>
+          </div>
+          <div class="field">
+            <label for="gdisc">Ground rate discount: <span id="gdiscOut">0%</span></label>
+            <input id="gdisc" type="range" min="0" max="80" step="1" value="0">
+          </div>
+          <div class="field">
+            <label for="adisc">Accessorial discount: <span id="adiscOut">0%</span></label>
+            <input id="adisc" type="range" min="0" max="100" step="5" value="0">
+            <p class="hint">Applies to additional handling and oversize.</p>
+          </div>
+          <div class="field">
+            <label for="min">Minimum charge ($)</label>
+            <input id="min" type="number" inputmode="decimal" min="0" step="0.01" value="11.99">
+            <p class="hint">FedEx's 2026 Ground minimum is $11.99. Agreements can lower it.</p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Surcharges</legend>
+          <div class="field">
+            <label for="fuel">Fuel surcharge (%)</label>
+            <div class="divrow">
+              <input id="fuel" type="number" inputmode="decimal" min="0" max="100" step="0.25" value="29.25">
+              <button type="button" class="divchip" id="fuelReset">Current</button>
+            </div>
+            <p class="hint">FedEx Ground, week of <span id="fuelWeek">Nov. 2 – Nov. 8, 2026</span>.</p>
+          </div>
+          <label class="chk"><input id="peak" type="checkbox" checked>
+            <span>Include FedEx peak (demand) surcharges</span></label>
+          <div class="field">
+            <label for="shipdate">Ship date</label>
+            <input id="shipdate" type="date">
+            <p class="hint" id="peakNote"></p>
+          </div>
+        </fieldset>
+
+        <button type="button" class="btn btn-primary calc-btn" id="calcBtn">Calculate</button>
+      </form>
+
+      <div class="calc-out" id="calcOut" aria-live="polite">
+        <h3>Estimated cost for this box</h3>
+        <ul class="ledger" id="ledger"></ul>
+        <div class="saveline" id="saveline"></div>
+
+        <div class="calc-cta" id="calcCta">
+          <p class="cta-k">There is no single published rate</p>
+          <h3>We help shippers cut exactly these charges.</h3>
+          <p>Lift Commerce pairs free multi-carrier shipping software with carrier-contract
+             expertise. Discounts, DIM divisors and accessorial terms depend on your volume,
+             industry and current carrier, so we price your agreement on your own invoices.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/shipping-scorecard">Get my free scorecard</a>
+            <a class="btn btn-ghost" href="https://meetings.hubspot.com/liftcommercesales2025/meet-with-lift-commerce-sales-2025-biz-dev-cal?uuid=ae7b475a-d107-49e2-9594-d729fb8d8cb8" target="_blank" rel="noopener">Book a call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="calc-note">Estimate based on FedEx's published 2026 FedEx Ground list rates (contiguous
+       U.S., zones 2–8) and published surcharges. It leaves out residential, delivery area and
+       other surcharges, and assumes one package. Your invoice depends on your FedEx agreement.</p>
+  </div>
+</div>
+</section>
+
+<div class="sticky-total" aria-hidden="true">
+  <span>Estimated total <b id="stickyTotal">$0.00</b></span>
+  <a href="#calcOut">Breakdown</a>
+</div>
+
+<section class="sec">
+<div class="wrap prose">
+  <p class="eyebrow">How it works</p>
+  <h2>How FedEx prices a large box, step by step</h2>
+  <ol class="howto">
+    <li><strong>Chargeable weight.</strong> FedEx rounds each side to the nearest inch, multiplies
+      them and divides by the DIM divisor (139 at published rates). You pay for the higher of that
+      figure and the actual weight. Boxes that trip additional handling for size bill at 40 lb or
+      more; oversize boxes at 90 lb or more.</li>
+    <li><strong>Base rate.</strong> The published Ground rate for that weight and zone, less your
+      ground discount, but never below the minimum charge ($11.99 in 2026).</li>
+    <li><strong>One additional handling charge.</strong> A box can qualify on weight (over 50 lb),
+      dimension (longest side over 48 in, second side over 30 in, length + girth over 105 in, or
+      over 10,368 in³) and packaging. FedEx charges only the highest one.</li>
+    <li><strong>Oversize instead.</strong> Over 96 in long, over 130 in length + girth, over
+      17,280 in³ or over 110 lb, the oversize charge replaces additional handling.</li>
+    <li><strong>Peak surcharges.</strong> From late September to mid-January, FedEx adds a demand
+      surcharge to every additional handling and oversize package, highest from Nov. 23 to Dec. 27.</li>
+    <li><strong>Fuel.</strong> A weekly percentage, applied to the base rate and the surcharges.</li>
+  </ol>
+
+  <h2 class="mt">Common questions</h2>
+  <div class="faq">
+    <details><summary>What is the FedEx Ground minimum charge in 2026?</summary>
+      <p>$11.99, the published rate for a 1 lb package to Zone 2. Many agreements set a lower
+         minimum, which matters if you ship a lot of small, light parcels.</p></details>
+    <details><summary>Can FedEx charge more than one additional handling surcharge on a box?</summary>
+      <p>No. If a package qualifies on weight and dimension, FedEx charges the higher of the two.
+         A 49 in box weighing 52 lb, for example, is charged the weight surcharge only.</p></details>
+    <details><summary>When do FedEx's 2026 peak surcharges apply?</summary>
+      <p>For additional handling and oversize packages, from Sept. 28, 2026 to Jan. 17, 2027.
+         The holiday window, Nov. 23 to Dec. 27, carries the highest amounts.</p></details>
+    <details><summary>Is a better DIM divisor worth more than a bigger discount?</summary>
+      <p>Often, for light, bulky boxes. The divisor lowers the weight every rate is looked up at,
+         so it reduces the base rate before any percentage discount. Try 139 against 225 above.</p></details>
+  </div>
+
+  <div class="callout"><h3>Related</h3>
+    <div class="linkrow">
+      <a class="chip" href="/resources/dimensional-weight">Dimensional weight &rarr;</a>
+      <a class="chip" href="/resources/additional-handling">Additional handling &rarr;</a>
+      <a class="chip" href="/resources/shipping-large-boxes">Shipping large boxes &rarr;</a>
+      <a class="chip" href="/services/carrier-contract-optimization">Contract optimization &rarr;</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="cta-band"><div class="wrap cta-in">
+  <div><h2>See these numbers on your own invoices.</h2><p>Send a recent FedEx or UPS invoice and your rate agreement. We will show where the money goes and which terms are worth renegotiating.</p></div>
+  <a class="btn btn-dark" href="/shipping-scorecard">Start my scorecard</a>
+</div></section>
+</main>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="f-grid">
+    <div class="f-brand">
+      <a href="/" aria-label="Lift Commerce home">
+          <img alt="Lift Commerce"
+               src="assets/img/lift-commerce-logo-white.avif">
+        </a>
+      <address class="f-nap">55 Post Road West<br>Westport, CT 06880<br>
+        <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a><br>
+        <a href="tel:+12036016208">+1 (203) 601-6208</a></address>
+        <div class="f-pay">
+          <img src="assets/img/mastercard.avif" alt="Mastercard accepted" loading="lazy">
+          <img src="assets/img/visa.avif" alt="Visa accepted" loading="lazy">
+          <img src="assets/img/american-express.avif" alt="American Express accepted" loading="lazy">
+          <img src="assets/img/usps-trusted-partner-direct-mail-service.avif" alt="USPS trusted partner" loading="lazy">
+        </div>
+    </div>
+    <div><h4>SERVICES</h4><ul>
+      <li><a href="/services/ltl-truckload">LTL and Truckload</a></li>
+      <li><a href="/services/shipping-software-integrations">Shipping Software and Integrations</a></li>
+      <li><a href="/services/ecommerce-shipping">E-Commerce Shipping</a></li>
+      <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization</a></li>
+    </ul></div>
+    <div><h4>INDUSTRIES</h4><ul>
+      <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+      <li><a href="/industries/home-goods">Home Goods</a></li>
+      <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+      <li><a href="/industries/apparel">Apparel</a></li>
+      <li><a href="/industries/medical">Medical</a></li>
+      <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+      <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+      <li><a href="/industries/electronics">Electronics</a></li>
+      <li><a href="/industries/cosmetics">Cosmetics</a></li>
+      <li><a href="/industries/3pl">3PL</a></li>
+    </ul></div>
+    <div><h4>RESOURCES</h4><ul>
+      <li><a href="/shipping-calculator" aria-current="page">Shipping Cost Calculator</a></li>
+      <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes</a></li>
+      <li><a href="/resources/dimensional-weight">Dimensional Weight</a></li>
+      <li><a href="/resources/additional-handling">Additional Handling</a></li>
+      <li><a href="/resources/international-shipping">International Shipping</a></li>
+    </ul></div>
+    <div><h4>COMPANY</h4><ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/shipping-scorecard">Shipping Scorecard</a></li>
+      <li><a href="/apply-now">Sign Up</a></li>
+      <li><a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></li>
+      <li><a href="https://meetings.hubspot.com/liftcommercesales2025/meet-with-lift-commerce-sales-2025-biz-dev-cal?uuid=ae7b475a-d107-49e2-9594-d729fb8d8cb8" target="_blank" rel="noopener">Schedule a demo</a></li>
+      <li><a href="https://meetings.hubspot.com/april138/meet-with-lift-commerce-client-services-30-minutes" target="_blank" rel="noopener">Client services session</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bot"><span>&copy; <span id="yr">2026</span> Lift Commerce. All rights reserved.</span>
+    <a href="https://login.liftcommerce.io/ec/terms-of-service">Terms and Conditions</a></div>
+</div></footer>
+
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('[data-dd]'));
+  var touch=function(){return window.matchMedia('(max-width:1100px)').matches;};
+  function close(it){it.setAttribute('data-open','false');
+    var b=it.querySelector('.nav-link'); if(b.tagName==='BUTTON') b.setAttribute('aria-expanded','false');}
+  function closeAll(x){items.forEach(function(it){if(it!==x)close(it);});}
+  items.forEach(function(it){
+    var btn=it.querySelector('.nav-link');
+    btn.addEventListener('click',function(e){e.preventDefault();
+      var o=it.getAttribute('data-open')==='true'; closeAll(it);
+      it.setAttribute('data-open',o?'false':'true'); btn.setAttribute('aria-expanded',o?'false':'true');});
+    it.addEventListener('mouseenter',function(){if(touch())return;closeAll(it);
+      it.setAttribute('data-open','true');btn.setAttribute('aria-expanded','true');});
+    it.addEventListener('mouseleave',function(){if(touch())return;close(it);});
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll(null);});
+  document.addEventListener('click',function(e){if(!e.target.closest('[data-dd]'))closeAll(null);});
+  var bg=document.getElementById('burger'),nv=document.getElementById('nav');
+  bg.addEventListener('click',function(){var o=nv.classList.toggle('open');
+    bg.setAttribute('aria-expanded',o?'true':'false'); if(!o)closeAll(null);});
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+})();
+</script>
+<script src="assets/js/shipping-calculator.js"></script>
+</body>
+</html>

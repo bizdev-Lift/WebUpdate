@@ -1,0 +1,1261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Multi-Carrier Shipping Software | Lift Commerce</title>
+<meta name="description" content="Free multi-carrier shipping software with 31 e-commerce integrations. Compare rates, organize orders and print shipping labels.">
+<link rel="canonical" href="https://www.liftcommerce.io/services/shipping-software-integrations">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lift Commerce">
+<meta property="og:title" content="Free Multi-Carrier Shipping Software | Lift Commerce">
+<meta property="og:description" content="Free multi-carrier shipping software with 31 e-commerce integrations. Compare rates, organize orders and print shipping labels.">
+<meta property="og:url" content="https://www.liftcommerce.io/services/shipping-software-integrations">
+<meta property="og:image" content="https://www.liftcommerce.io/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lift Commerce: stop overpaying on every box you ship">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --ink:#16233F;
+ --ink2:#1E3355;
+ --teal:#0088B0;
+ --tealdark:#006786;
+ --cyan:#62C5EE;
+ --paper:#fff;
+ --mist:#F5F4F2;
+ --tint:#E9F8FF;
+ --line:#D7D3D3;
+ --body:#444141;
+ --muted:#605D5D;
+ --serif:"Source Serif 4",Georgia,serif;
+ --mono:"IBM Plex Mono",monospace;
+ --wrap:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+ margin:0;
+ font-family:var(--serif);
+ font-size:17px;
+ line-height:1.68;
+ color:var(--body);
+ background:#fff;
+ overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--tealdark)}
+a:hover{text-decoration:underline}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{
+ margin:0;
+ line-height:1.14;
+ letter-spacing:-.015em;
+ color:var(--ink);
+}
+h1{font-size:clamp(2rem,3.7vw,3rem);font-weight:600}
+h2{font-size:clamp(1.55rem,2.8vw,2.2rem);font-weight:600}
+h3{font-size:1.2rem;font-weight:600}
+h4{font-size:1.02rem;font-weight:600}
+p{margin:0 0 1.1rem}
+.wrap{
+ width:100%;
+ max-width:var(--wrap);
+ margin:0 auto;
+ padding-left:24px;
+ padding-right:24px;
+}
+.eyebrow{
+ font:600 .71rem var(--mono);
+ letter-spacing:.16em;
+ text-transform:uppercase;
+ color:var(--tealdark);
+ margin:0 0 .7rem;
+}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden}
+.skip:focus{
+ position:fixed;top:10px;left:10px;
+ width:auto;height:auto;z-index:999;
+ padding:10px 16px;background:var(--teal);color:#fff;
+}
+
+/* BUTTONS */
+.btn{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ gap:.5rem;
+ padding:.8rem 1.5rem;
+ border:2px solid transparent;
+ border-radius:2px;
+ font-size:1rem;
+ font-family:Arial,Helvetica,sans-serif;font-weight:600;
+ text-decoration:none;
+ transition:background .2s,transform .2s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{
+ color:#fff;
+ background:var(--teal);
+ box-shadow:0 4px 14px rgba(0,136,176,.3);
+}
+.btn-primary:hover{background:var(--tealdark)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink2)}
+.chip{
+ display:inline-flex;
+ padding:.5rem .9rem;
+ border:1px solid var(--line);
+ border-radius:2px;
+ background:#fff;
+ font-size:.92rem;
+ color:var(--ink);
+ text-decoration:none;
+}
+.chip:hover{border-color:var(--teal);color:var(--tealdark);text-decoration:none}
+.linkrow{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+
+/* HEADER */
+.topbar{background:var(--ink);color:#c3ccda;font-size:.82rem;padding:.45rem 0}
+.topbar .wrap{display:flex;justify-content:flex-end;gap:1.6rem;flex-wrap:wrap}
+.topbar a{color:#c3ccda;text-decoration:none}
+.topbar a:hover{color:var(--cyan)}
+.site-head{
+ position:sticky;
+ top:0;
+ z-index:200;
+ background:#fff;
+ border-bottom:1px solid var(--line);
+}
+.head-in{min-height:76px;display:flex;align-items:center;gap:1rem}
+.brand-logo img{height:46px;width:auto}
+.brand-fallback{
+ font-size:1.55rem;
+ font-weight:600;
+ color:var(--ink);
+ white-space:nowrap;
+ text-decoration:none;
+}
+.brand-fallback b{color:var(--teal)}
+.nav{display:flex;align-items:center;gap:.15rem;margin-left:auto}
+.nav-item{position:relative}
+.nav-link{
+ display:flex;
+ align-items:center;
+ gap:.35rem;
+ padding:.7rem .62rem;
+ color:var(--ink);
+ background:none;
+ border:0;
+ border-radius:2px;
+ white-space:nowrap;
+ font-size:1.02rem;
+ text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:600;}
+.nav-link:hover{color:var(--tealdark);background:var(--tint);text-decoration:none}
+.nav-link.is-cta{background:var(--teal);color:#fff;margin-left:.5rem;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+.nav-link.is-cta:hover{background:var(--tealdark);color:#fff}
+.nav-link[aria-current="page"]{color:var(--tealdark);box-shadow:inset 0 -2px 0 var(--teal)}
+.caret{
+ width:9px;height:9px;
+ border-right:2px solid currentColor;
+ border-bottom:2px solid currentColor;
+ transform:rotate(45deg) translateY(-2px);
+}
+.nav-item[data-open="true"] .caret{transform:rotate(-135deg)}
+.panel{
+ position:absolute;
+ top:calc(100% + 8px);
+ left:0;
+ z-index:50;
+ min-width:300px;
+ margin:0;
+ padding:.55rem;
+ list-style:none;
+ background:#fff;
+ border:1px solid var(--line);
+ border-radius:2px;
+ box-shadow:0 12px 32px rgba(45,43,43,.16);
+ opacity:0;
+ visibility:hidden;
+ transform:translateY(-8px);
+ transition:opacity .18s,transform .18s,visibility .18s;
+}
+.panel.cols{min-width:540px;display:grid;grid-template-columns:1fr 1fr}
+.nav-item[data-open="true"] .panel{
+ opacity:1;visibility:visible;transform:translateY(0);
+}
+.panel a{
+ display:block;
+ padding:.6rem .8rem;
+ color:var(--ink);
+ font-size:.96rem;
+ text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:600;}
+.panel a:hover{background:var(--tint);color:var(--tealdark)}
+.panel a small{display:block;color:var(--muted);font-size:.8rem;font-weight:400}
+.burger{
+ display:none;
+ margin-left:auto;
+ padding:.55rem .7rem;
+ border:1px solid var(--line);
+ background:none;
+}
+.burger span{display:block;width:22px;height:2px;margin:4px 0;background:var(--ink)}
+
+/* HERO — FIXED ALIGNMENT AND TRANSPARENCY */
+.phero{
+ position:relative;
+ color:#fff;
+ background:linear-gradient(150deg,var(--ink) 0%,var(--ink2) 70%,#254063 100%);
+ overflow:hidden;
+}
+.phero::before{
+ content:"";
+ position:absolute;
+ inset:0;
+ pointer-events:none;
+ background:repeating-linear-gradient(
+ 135deg,rgba(98,197,238,.06) 0 2px,transparent 2px 22px
+ );
+}
+.crumb{
+ position:relative;
+ z-index:2;
+ padding-top:1.4rem;
+ color:#8ba7bf;
+ font:.72rem var(--mono);
+ letter-spacing:.06em;
+}
+.crumb a{color:#8ba7bf;text-decoration:none}
+.phero-in{
+ position:relative;
+ z-index:2;
+ display:grid;
+ grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+ align-items:center;
+ gap:2.5rem;
+ padding-top:3.6rem;
+ padding-bottom:3.2rem;
+}
+.hero-copy{
+ min-width:0;
+ padding-left:0;
+}
+.phero h1{color:#fff;overflow-wrap:normal}
+.phero h1 em{font-style:italic;font-weight:400;color:var(--cyan)}
+.phero .eyebrow{color:var(--cyan)}
+.phero p{
+ color:#c9dced;
+ font-size:1.1rem;
+ margin:1.1rem 0 0;
+}
+.phero-cta{
+ display:flex;
+ gap:.9rem;
+ flex-wrap:wrap;
+ margin-top:1.8rem;
+}
+
+/* TRANSPARENT SVG — NO JPG/PNG BACKDROP */
+.hero-art{
+ position:relative;
+ width:100%;
+ max-width:540px;
+ min-width:0;
+ margin:auto;
+ background:none!important;
+ isolation:isolate;
+}
+.hero-art svg{
+ display:block;
+ width:100%;
+ height:auto;
+ max-width:100%;
+ background:none!important;
+ overflow:visible;
+}
+.hero-art .orbit{
+ stroke-dasharray:5 8;
+ animation:flow 16s linear infinite;
+}
+.hero-art .float1{animation:float 5s ease-in-out infinite}
+.hero-art .float2{animation:float 5s ease-in-out -2.5s infinite}
+@keyframes flow{to{stroke-dashoffset:-130}}
+@keyframes float{
+ 0%,100%{transform:translateY(0)}
+ 50%{transform:translateY(-5px)}
+}
+
+/* SECTIONS */
+.sec{padding:4rem 0}
+.mist{background:var(--mist)}
+.sec-head{max-width:64ch;margin-bottom:2.2rem}
+.sec-head p{margin-top:.8rem;font-size:1.05rem}
+.grid{display:grid;gap:1.3rem}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{
+ padding:1.6rem;
+ border:1px solid var(--line);
+ border-radius:2px;
+ background:#fff;
+}
+.card.tealtop{border-top:3px solid var(--teal)}
+.card h3{margin-bottom:.6rem}
+.card .num{
+ display:block;
+ margin-bottom:.5rem;
+ color:var(--teal);
+ font:600 .78rem var(--mono);
+}
+.steps{padding:0;margin:0;list-style:none;counter-reset:steps}
+.steps li{
+ display:grid;
+ grid-template-columns:auto 1fr;
+ gap:1.1rem;
+ padding:1.3rem 0;
+ border-bottom:1px solid var(--line);
+ counter-increment:steps;
+}
+.steps li::before{
+ content:counter(steps,decimal-leading-zero);
+ color:var(--teal);
+ font:600 .82rem var(--mono);
+}
+.steps h3{margin-bottom:.35rem}
+.steps p{margin:0;font-size:.98rem}
+.callout{
+ padding:1.3rem 1.5rem;
+ margin:1.6rem 0;
+ border-left:3px solid var(--teal);
+ background:var(--tint);
+}
+.callout h3{margin-bottom:.5rem}
+.cta-band{padding:3rem 0;background:var(--teal)}
+.cta-in{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:2rem;
+ flex-wrap:wrap;
+}
+.cta-in h2{color:#fff;margin-bottom:.4rem}
+.cta-in p{color:#dcf0f8;margin:0;max-width:48ch}
+
+/* GRID */
+.igrid{
+ display:grid;
+ grid-template-columns:repeat(6,minmax(0,1fr));
+ gap:.8rem;
+}
+.icell{
+ min-width:0;
+ min-height:104px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ gap:.5rem;
+ padding:1rem .6rem;
+ border:1px solid var(--line);
+ border-radius:2px;
+ background:#fff;
+ text-decoration:none;
+ transition:border-color .18s,transform .18s,box-shadow .18s;
+}
+.icell:hover{
+ border-color:var(--teal);
+ transform:translateY(-3px);
+ box-shadow:0 8px 18px rgba(45,43,43,.1);
+ text-decoration:none;
+}
+.integration-logo{
+ width:58px;
+ height:48px;
+ flex-shrink:0;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+.integration-logo img{
+ display:block;
+ width:48px;
+ height:40px;
+ max-width:48px;
+ max-height:40px;
+ object-fit:contain;
+ transition:transform .18s;
+}
+.icell:hover .integration-logo img{transform:scale(1.06)}
+.platform-name{
+ font-size:.76rem;
+ line-height:1.25;
+ color:var(--muted);
+ text-align:center;
+}
+.icount{
+ margin-bottom:1rem;
+ font:.8rem var(--mono);
+ color:var(--muted);
+}
+
+/* FOOTER */
+.site-foot{
+ padding:3.2rem 0 1.5rem;
+ color:#a9c2d6;
+ background:var(--ink);
+ font-size:.92rem;
+}
+.f-grid{
+ display:grid;
+ grid-template-columns:1.3fr 1fr 1.1fr 1fr 1fr;
+ gap:2rem;
+}
+.site-foot h4{
+ color:#fff;
+ font:600 .72rem var(--mono);
+ letter-spacing:.14em;
+ margin-bottom:1rem;
+}
+.site-foot ul{padding:0;margin:0;list-style:none}
+.site-foot li{margin-bottom:.5rem}
+.site-foot a{font-family:Arial,Helvetica,sans-serif;color:#a9c2d6;text-decoration:none}
+.site-foot a:hover{color:var(--cyan)}
+.site-foot a[aria-current="page"]{color:#fff}
+.site-foot .brand-fallback{color:#fff}
+.f-nap{font-style:normal;line-height:1.85}
+.f-nap a{color:#fff}
+.f-brand img{height:56px;margin-bottom:1rem}
+.f-pay{display:flex;gap:.7rem;align-items:center;margin-top:1.2rem;flex-wrap:wrap}
+.f-pay img{height:30px;width:auto;opacity:.85;background:#fff;border-radius:4px;padding:3px 5px}
+.f-bot{
+ display:flex;
+ justify-content:space-between;
+ gap:1rem;
+ flex-wrap:wrap;
+ margin-top:2.4rem;
+ padding-top:1.2rem;
+ border-top:1px solid rgba(255,255,255,.13);
+ font-size:.82rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+ .burger{display:block}
+ .nav{
+  display:none;
+  position:fixed;
+  inset:76px 0 auto;
+  flex-direction:column;
+  align-items:stretch;
+  max-height:calc(100vh - 76px);
+  overflow-y:auto;
+  padding:.7rem 20px 1.4rem;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  box-shadow:0 12px 32px rgba(45,43,43,.16);
+ }
+ .nav.open{display:flex}
+ .nav-link{
+  width:100%;
+  justify-content:space-between;
+  padding:.85rem .3rem;
+  border-bottom:1px solid var(--line);
+  font-size:1.1rem;
+ }
+ .nav-link.is-cta{margin:.8rem 0 0;justify-content:center}
+ .panel,.panel.cols{
+  display:none;
+  position:static;
+  opacity:1;
+  visibility:visible;
+  transform:none;
+  min-width:0;
+  border:0;
+  box-shadow:none;
+  background:var(--mist);
+  grid-template-columns:1fr;
+ }
+ .nav-item[data-open="true"] .panel{display:block}
+ .nav-item[data-open="true"] .panel.cols{display:grid}
+ .f-grid{grid-template-columns:repeat(3,1fr)}
+ .f-brand{grid-column:1/-1}
+}
+@media(max-width:1024px){
+ .igrid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:900px){
+ .phero-in{grid-template-columns:1fr;gap:2rem}
+ .hero-art{max-width:520px}
+ .g3{grid-template-columns:1fr}
+ .f-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+ body{font-size:16px}
+ .wrap{padding-left:18px;padding-right:18px}
+ .sec{padding:2.8rem 0}
+ .igrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .f-grid{grid-template-columns:1fr}
+ .hero-art{max-width:440px}
+ .phero-in{padding-top:2.5rem;padding-bottom:2.5rem}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{
+  animation:none!important;
+  transition:none!important;
+  scroll-behavior:auto!important;
+ }
+}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.liftcommerce.io/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Shipping Software and Integrations",
+     "item": "https://www.liftcommerce.io/services/shipping-software-integrations"
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "name": "Shipping Software and Integrations",
+   "serviceType": "Multi-carrier shipping software",
+   "provider": {
+    "@type": "Organization",
+    "name": "Lift Commerce",
+    "url": "https://www.liftcommerce.io/",
+    "telephone": "+1-203-601-6208",
+    "email": "Team@LiftCommerce.net",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "55 Post Road West",
+     "addressLocality": "Westport",
+     "addressRegion": "CT",
+     "postalCode": "06880",
+     "addressCountry": "US"
+    }
+   },
+   "areaServed": "US",
+   "url": "https://www.liftcommerce.io/services/shipping-software-integrations",
+   "description": "Free multi-carrier shipping software with 31 e-commerce integrations. Compare rates, organize orders and print shipping labels."
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to main content</a>
+
+<!-- TOP BAR -->
+<div class="topbar">
+<div class="wrap">
+ <a href="tel:+12036016208">P: +1 (203) 601-6208</a>
+ <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a>
+ <a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Client Login</a>
+</div>
+</div>
+
+<!-- HEADER -->
+<header class="site-head">
+<div class="wrap head-in">
+ <a class="brand-logo" href="/" aria-label="Lift Commerce home">
+  <img alt="Lift Commerce" src="../assets/img/lift-commerce-logo.avif"
+  onerror="this.outerHTML='&lt;span class=\'brand-fallback\'&gt;Lift&lt;b&gt;Commerce&lt;/b&gt;&lt;/span&gt;'">
+ </a>
+
+ <button class="burger" id="burger" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+  <span></span><span></span><span></span>
+ </button>
+
+ <nav class="nav" id="nav" aria-label="Primary">
+  <div class="nav-item" data-dd data-open="false">
+   <button class="nav-link" aria-expanded="false" aria-current="page">Services <i class="caret"></i></button>
+   <ul class="panel">
+    <li><a href="/services/ltl-truckload">LTL and Truckload<small>Pallets, crates and heavy freight</small></a></li>
+    <li><a href="/services/shipping-software-integrations" aria-current="page">Shipping Software and Integrations<small>Free multi-carrier platform, 32 connectors</small></a></li>
+    <li><a href="/services/ecommerce-shipping">E-Commerce Shipping<small>Rates, account management, claims support</small></a></li>
+    <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization<small>Invoice audit and agreement negotiation</small></a></li>
+   </ul>
+  </div>
+
+  <div class="nav-item" data-dd data-open="false">
+   <button class="nav-link" aria-expanded="false">Industries <i class="caret"></i></button>
+   <ul class="panel cols">
+    <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+    <li><a href="/industries/home-goods">Home Goods</a></li>
+    <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+    <li><a href="/industries/apparel">Apparel</a></li>
+    <li><a href="/industries/medical">Medical</a></li>
+    <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+    <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+    <li><a href="/industries/electronics">Electronics</a></li>
+    <li><a href="/industries/cosmetics">Cosmetics</a></li>
+    <li><a href="/industries/3pl">3PL</a></li>
+   </ul>
+  </div>
+
+  <div class="nav-item" data-dd data-open="false">
+   <button class="nav-link" aria-expanded="false">Resources <i class="caret"></i></button>
+   <ul class="panel">
+    <li><a href="/shipping-calculator">Shipping Cost Calculator<small>Price a box with 2026 FedEx rates</small></a></li>
+        <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes<small>Oversize shipping costs</small></a></li>
+    <li><a href="/resources/dimensional-weight">Dimensional Weight<small>DIM weight and calculations</small></a></li>
+    <li><a href="/resources/additional-handling">Additional Handling<small>Parcel handling charges</small></a></li>
+    <li><a href="/resources/international-shipping">International Shipping<small>Global parcel shipping</small></a></li>
+   </ul>
+  </div>
+
+  <div class="nav-item"><a class="nav-link" href="/contact">Contact</a></div>
+  <div class="nav-item"><a class="nav-link" href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></div>
+  <div class="nav-item"><a class="nav-link is-cta" href="/shipping-scorecard">Shipping Scorecard</a></div>
+ </nav>
+</div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="phero split">
+ <div class="wrap crumb">
+  <a href="/">Home</a>
+  / Services / Shipping Software and Integrations
+ </div>
+
+ <div class="wrap phero-in">
+  <div class="hero-copy">
+   <p class="eyebrow">Shipping software</p>
+   <h1>One platform for every store you sell on. <em>Free to use.</em></h1>
+   <p>Lift Commerce webship software connects unlimited stores and marketplaces, consolidates orders into a single queue, rate-shops every carrier and prints labels — with no monthly platform fee and no per-seat licensing.</p>
+   <div class="phero-cta">
+    <a class="btn btn-primary" href="/shipping-scorecard">Start Your Analysis</a>
+    <a class="btn btn-ghost" href="/contact">Book a demo</a>
+   </div>
+  </div>
+
+  <!--
+   FULLY TRANSPARENT HERO ILLUSTRATION.
+   Only the SVG objects are painted.
+   The surrounding navy comes from .phero,
+   not from the illustration.
+  -->
+  <div class="hero-art">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 430"
+        role="img" aria-label="Ecommerce stores connecting to Lift Commerce shipping software, parcels and carrier rates">
+
+    <defs>
+     <linearGradient id="dashpanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#315B82"/>
+      <stop offset="1" stop-color="#142C49"/>
+     </linearGradient>
+     <linearGradient id="screenfill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCEFFA"/>
+     </linearGradient>
+     <linearGradient id="cardboard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE2AC"/>
+      <stop offset="1" stop-color="#DDA055"/>
+     </linearGradient>
+     <filter id="softshadow" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#030D20" flood-opacity=".27"/>
+     </filter>
+     <radialGradient id="bluering">
+      <stop offset="0" stop-color="#17B8EB" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#17B8EB" stop-opacity="0"/>
+     </radialGradient>
+    </defs>
+
+    <!-- SOFT ATMOSPHERE, TRANSPARENT OUTSIDE -->
+    <ellipse cx="335" cy="218" rx="245" ry="184" fill="url(#bluering)"/>
+    <ellipse cx="328" cy="213" rx="270" ry="157" fill="none"
+             stroke="#4BCDF1" stroke-opacity=".14" stroke-width="2"/>
+
+    <!-- CONNECTING LINES -->
+    <g fill="none" stroke="#65DDF5" stroke-width="2.3" opacity=".75">
+     <path class="orbit" d="M151 82 C206 82 217 148 270 148"/>
+     <path class="orbit" d="M146 168 C203 168 210 183 270 183"/>
+     <path class="orbit" d="M153 249 C215 249 216 232 270 232"/>
+     <path class="orbit" d="M426 174 C454 174 468 116 494 116"/>
+     <path class="orbit" d="M426 234 C457 234 474 256 500 256"/>
+    </g>
+
+    <!-- LEFT CARDS -->
+    <g class="float1" filter="url(#softshadow)">
+     <rect x="23" y="48" width="147" height="72" rx="13"
+           fill="url(#dashpanel)" stroke="#609ABC"/>
+     <rect x="35" y="61" width="38" height="42" rx="8" fill="#E9F9FF"/>
+     <path d="M44 76 H65 L62 95 H47 Z M50 77 V70 Q54 64 60 70 V77"
+           fill="none" stroke="#0091B8" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round"/>
+     <text x="83" y="77" font-family="Arial,sans-serif" font-size="11"
+           font-weight="700" fill="#FFFFFF">ONLINE</text>
+     <text x="83" y="93" font-family="Arial,sans-serif" font-size="11"
+           fill="#B8DDF1">STORES</text>
+    </g>
+
+    <g class="float2" filter="url(#softshadow)">
+     <rect x="14" y="139" width="151" height="70" rx="13"
+           fill="url(#dashpanel)" stroke="#609ABC"/>
+     <rect x="27" y="153" width="38" height="41" rx="8" fill="#E9F9FF"/>
+     <path d="M37 163 L47 158 L57 163 V185 H37 Z M47 159 V185"
+           fill="none" stroke="#0091B8" stroke-width="2.3"/>
+     <text x="75" y="168" font-family="Arial,sans-serif" font-size="11"
+           font-weight="700" fill="#FFFFFF">MARKET</text>
+     <text x="75" y="183" font-family="Arial,sans-serif" font-size="11"
+           fill="#B8DDF1">PLACES</text>
+    </g>
+
+    <g class="float1" filter="url(#softshadow)">
+     <rect x="25" y="225" width="145" height="68" rx="13"
+           fill="url(#dashpanel)" stroke="#609ABC"/>
+     <rect x="38" y="239" width="37" height="40" rx="8" fill="#E9F9FF"/>
+     <path d="M46 248 H67 M46 256 H63 M46 264 H58"
+           fill="none" stroke="#0091B8" stroke-width="2.4"
+           stroke-linecap="round"/>
+     <text x="84" y="254" font-family="Arial,sans-serif" font-size="11"
+           font-weight="700" fill="#FFFFFF">ERP</text>
+     <text x="84" y="270" font-family="Arial,sans-serif" font-size="10"
+           fill="#B8DDF1">SYSTEMS</text>
+    </g>
+
+    <!-- MAIN SHIPPING DASHBOARD -->
+    <g filter="url(#softshadow)">
+     <rect x="184" y="85" width="286" height="228" rx="15"
+           fill="#10243A" stroke="#74C1E5" stroke-width="2.5"/>
+     <rect x="196" y="97" width="262" height="201" rx="8"
+           fill="url(#screenfill)"/>
+     <path d="M196 106 Q196 97 205 97 H265 V298 H196 Z"
+           fill="#1C4262"/>
+     <circle cx="214" cy="115" r="5" fill="#35C5EE"/>
+     <text x="226" y="119" font-family="Arial,sans-serif" font-size="10"
+           font-weight="700" fill="#FFFFFF">LIFT</text>
+
+     <g fill="#7CA5C0">
+      <rect x="210" y="146" width="39" height="5" rx="2"/>
+      <rect x="210" y="162" width="34" height="5" rx="2"/>
+      <rect x="210" y="178" width="39" height="5" rx="2"/>
+      <rect x="210" y="194" width="31" height="5" rx="2"/>
+      <rect x="210" y="210" width="37" height="5" rx="2"/>
+     </g>
+
+     <text x="280" y="119" font-family="Arial,sans-serif" font-size="14"
+           font-weight="700" fill="#183B59">Shipping Dashboard</text>
+
+     <!-- ORDER METRICS -->
+     <rect x="279" y="133" width="74" height="44" rx="7"
+           fill="#FFFFFF" stroke="#D6E7F1"/>
+     <text x="288" y="148" font-family="Arial,sans-serif"
+           font-size="9" fill="#66869A">ORDERS</text>
+     <text x="288" y="167" font-family="Arial,sans-serif"
+           font-size="20" font-weight="700" fill="#1B425E">128</text>
+
+     <rect x="361" y="133" width="82" height="44" rx="7"
+           fill="#FFFFFF" stroke="#D6E7F1"/>
+     <text x="369" y="148" font-family="Arial,sans-serif"
+           font-size="9" fill="#66869A">FULFILLED</text>
+     <text x="369" y="167" font-family="Arial,sans-serif"
+           font-size="20" font-weight="700" fill="#009981">96%</text>
+
+     <!-- ORDER LIST -->
+     <rect x="279" y="186" width="164" height="99" rx="7"
+           fill="#FFFFFF" stroke="#D6E7F1"/>
+     <rect x="287" y="194" width="148" height="16" rx="3"
+           fill="#E0F3FA"/>
+     <text x="293" y="205" font-family="Arial,sans-serif"
+           font-size="8" fill="#315D79">ORDER</text>
+     <text x="375" y="205" font-family="Arial,sans-serif"
+           font-size="8" fill="#315D79">STATUS</text>
+     <g font-family="Arial,sans-serif" font-size="9" fill="#45667A">
+      <text x="294" y="228">#10428</text>
+      <text x="294" y="248">#10427</text>
+      <text x="294" y="269">#10426</text>
+     </g>
+     <rect x="364" y="216" width="64" height="16" rx="8" fill="#D6F7EB"/>
+     <rect x="364" y="236" width="64" height="16" rx="8" fill="#D8F1FC"/>
+     <rect x="364" y="257" width="64" height="16" rx="8" fill="#D6F7EB"/>
+     <g font-family="Arial,sans-serif" font-size="8" text-anchor="middle">
+      <text x="396" y="227" fill="#08775C">Ready</text>
+      <text x="396" y="247" fill="#2579A0">Processing</text>
+      <text x="396" y="268" fill="#08775C">Shipped</text>
+     </g>
+
+     <!-- MONITOR STAND -->
+     <path d="M297 313 H361 L367 345 H291 Z" fill="#708AA1"/>
+     <rect x="271" y="341" width="119" height="11" rx="5"
+           fill="#B7CBD9"/>
+    </g>
+
+    <!-- RIGHT RATE COMPARISON -->
+    <g class="float2" filter="url(#softshadow)">
+     <rect x="481" y="78" width="129" height="157" rx="13"
+           fill="url(#dashpanel)" stroke="#609ABC"/>
+     <text x="494" y="100" font-family="Arial,sans-serif" font-size="10"
+           font-weight="700" fill="#DCF7FF">COMPARE RATES</text>
+     <rect x="493" y="111" width="105" height="36" rx="7"
+           fill="#E7FBFF"/>
+     <circle cx="506" cy="128" r="6" fill="#00A887"/>
+     <path d="M503 128 L505 130 L509 125" fill="none"
+           stroke="#FFFFFF" stroke-width="1.5"/>
+     <text x="518" y="125" font-family="Arial,sans-serif"
+           font-size="9" fill="#174661">Carrier 1</text>
+     <text x="518" y="138" font-family="Arial,sans-serif"
+           font-size="10" font-weight="700" fill="#007F67">Best rate</text>
+     <rect x="493" y="156" width="105" height="29" rx="6"
+           fill="#294E70"/>
+     <circle cx="505" cy="170" r="5" fill="none" stroke="#98C1D6"/>
+     <rect x="519" y="166" width="58" height="5" rx="2" fill="#A9D2E8"/>
+     <rect x="519" y="175" width="37" height="4" rx="2" fill="#6394B4"/>
+     <rect x="493" y="194" width="105" height="29" rx="6"
+           fill="#294E70"/>
+     <circle cx="505" cy="208" r="5" fill="none" stroke="#98C1D6"/>
+     <rect x="519" y="204" width="58" height="5" rx="2" fill="#A9D2E8"/>
+     <rect x="519" y="213" width="37" height="4" rx="2" fill="#6394B4"/>
+    </g>
+
+    <!-- PACKAGE -->
+    <g filter="url(#softshadow)">
+     <ellipse cx="333" cy="396" rx="98" ry="13" fill="#071D32" opacity=".23"/>
+     <path d="M254 341 L334 299 L408 339 L329 381 Z"
+           fill="#FFE0A7" stroke="#D89F5B" stroke-width="2"/>
+     <path d="M254 341 L329 381 V418 L254 377 Z"
+           fill="url(#cardboard)" stroke="#C48B47" stroke-width="2"/>
+     <path d="M329 381 L408 339 V378 L329 418 Z"
+           fill="#BB7D43" stroke="#A76A38" stroke-width="2"/>
+     <path d="M293 321 L369 359 L354 366 L278 328 Z"
+           fill="#FFF4D5"/>
+     <path d="M354 366 L369 359 V391 L354 398 Z"
+           fill="#E8BB77"/>
+     <path d="M276 365 l9 5 9 -4" fill="none"
+           stroke="#B77D42" stroke-width="2"/>
+     <circle cx="412" cy="337" r="20"
+             fill="#0B8396" stroke="#76EBCF" stroke-width="2.5"/>
+     <path d="M403 337 l6 6 12 -13" fill="none"
+           stroke="#FFFFFF" stroke-width="3.5"
+           stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- TRACKING -->
+    <g class="float1" filter="url(#softshadow)">
+     <rect x="34" y="315" width="170" height="65" rx="12"
+           fill="url(#dashpanel)" stroke="#609ABC"/>
+     <text x="48" y="335" font-family="Arial,sans-serif" font-size="10"
+           font-weight="700" fill="#D9F6FF">ORDER TRACKING</text>
+     <path d="M56 354 H182" stroke="#4D81A2" stroke-width="2.5"/>
+     <path d="M56 354 H157" stroke="#5BE4C3" stroke-width="2.5"/>
+     <circle cx="56" cy="354" r="5" fill="#5BE4C3"/>
+     <circle cx="106" cy="354" r="5" fill="#5BE4C3"/>
+     <circle cx="157" cy="354" r="5" fill="#5BE4C3"/>
+     <circle cx="182" cy="354" r="5" fill="#4A91B8"/>
+    </g>
+
+    <!-- GLOBE -->
+    <g class="float2" filter="url(#softshadow)">
+     <circle cx="542" cy="319" r="47"
+             fill="#205779" stroke="#60DBF1" stroke-width="2"/>
+     <ellipse cx="542" cy="319" rx="22" ry="47"
+              fill="none" stroke="#8AEAF8" stroke-opacity=".65"/>
+     <path d="M496 319 H588 M509 299 H575 M509 339 H575"
+           stroke="#8AEAF8" stroke-opacity=".65" fill="none"/>
+     <path d="M521 307 Q536 297 551 308 L546 324 L527 321 Z"
+           fill="#23C4C8" opacity=".7"/>
+    </g>
+   </svg>
+  </div>
+ </div>
+</section>
+
+<!-- INTEGRATIONS -->
+<section class="sec">
+<div class="wrap">
+ <div class="sec-head">
+  <p class="eyebrow">Pick your platform</p>
+  <h2>32 plug-and-play integrations</h2>
+  <p>Choose your store, marketplace, ERP or accounting system to see how the connection works and what it costs to run. Every integration is included at no charge.</p>
+ </div>
+ <p class="icount" id="icount"></p>
+ <div class="igrid" id="igrid"></div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec mist">
+<div class="wrap">
+ <div class="sec-head">
+  <p class="eyebrow">How it works</p>
+  <h2>Connected in an afternoon</h2>
+ </div>
+ <ol class="steps">
+  <li><div>
+   <h3>Authorise the connection</h3>
+   <p>Log in to your store and approve the Lift Commerce connection. No developer, no plugin to maintain, no code on your storefront. Multi-store and multi-marketplace sellers connect as many channels as they need.</p>
+  </div></li>
+  <li><div>
+   <h3>Orders flow into one queue</h3>
+   <p>Every channel lands in a single view with addresses validated and items mapped to your package profiles. Batch by carrier, service, ship date or warehouse.</p>
+  </div></li>
+  <li><div>
+   <h3>Rate-shop and set automation rules</h3>
+   <p>Compare live rates across carriers on every order, or write rules that pick automatically by weight, zone, dimensions, declared value or service promise — so the cheapest compliant option gets chosen without anyone deciding.</p>
+  </div></li>
+  <li><div>
+   <h3>Print, track and push back</h3>
+   <p>Labels print to your existing thermal printers. Tracking numbers write back to the store and trigger your customer notifications, so buyers see the same status you do.</p>
+  </div></li>
+ </ol>
+</div>
+</section>
+
+<!-- BENEFITS -->
+<section class="sec">
+<div class="wrap">
+ <div class="sec-head">
+  <p class="eyebrow">Why sellers switch</p>
+  <h2>Where the savings actually come from</h2>
+ </div>
+ <div class="grid g3">
+  <article class="card tealtop">
+   <span class="num">01</span>
+   <h3>Big boxes cost more than you think</h3>
+   <p>Oversize, additional handling and dimensional weight can add $30 to $60 to a single parcel before transportation is counted. If you ship large or awkward products, this is almost always the biggest line to attack.</p>
+   <div class="linkrow">
+    <a class="chip" href="/resources/shipping-large-boxes">Shipping large boxes &rarr;</a>
+   </div>
+  </article>
+  <article class="card tealtop">
+   <span class="num">02</span>
+   <h3>No monthly platform fee</h3>
+   <p>Most shipping platforms charge per month, per user or per label. Ours is free to use — you pay for freight, not for software seats — so the savings stay with you instead of funding a subscription.</p>
+  </article>
+  <article class="card tealtop">
+   <span class="num">03</span>
+   <h3>A named account manager</h3>
+   <p>A direct line rather than a ticket queue. They review your invoices, hunt for savings and handle claims, tracers and lost packages.</p>
+   <div class="linkrow">
+    <a class="chip" href="/services/ecommerce-shipping">E-commerce shipping &rarr;</a>
+   </div>
+  </article>
+ </div>
+
+ <div class="callout">
+  <h3>Shipping large, oversize or low-density products?</h3>
+  <p>This is the problem we solve best. Whatever platform you sell on, the surcharges that hit big boxes work the same way — and they respond to the same three levers: correct dimensions, a better DIM divisor, and negotiated accessorial discounts.</p>
+  <div class="linkrow">
+   <a class="chip" href="/resources/shipping-large-boxes">Shipping Large Boxes &rarr;</a>
+   <a class="chip" href="/resources/dimensional-weight">Dimensional Weight &rarr;</a>
+   <a class="chip" href="/resources/additional-handling">Additional Handling &rarr;</a>
+   <a class="chip" href="/resources/international-shipping">International Shipping &rarr;</a>
+  </div>
+ </div>
+</div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta-band">
+<div class="wrap cta-in">
+ <div>
+  <h2>Not sure what you're overpaying for?</h2>
+  <p>Send a recent carrier invoice and rate agreement. You get a written scorecard back showing the surcharges you're paying and what they should cost.</p>
+ </div>
+ <a class="btn btn-dark" href="/shipping-scorecard">Start my scorecard</a>
+</div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+<div class="wrap">
+ <div class="f-grid">
+  <div class="f-brand">
+   <a href="/" aria-label="Lift Commerce home">
+          <img alt="Lift Commerce"
+               src="../assets/img/lift-commerce-logo-white.avif">
+        </a>
+   <address class="f-nap">
+    55 Post Road West<br>
+    Westport, CT 06880<br>
+    <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a><br>
+    <a href="tel:+12036016208">+1 (203) 601-6208</a>
+   </address>
+        <div class="f-pay">
+          <img src="../assets/img/mastercard.avif" alt="Mastercard accepted" loading="lazy">
+          <img src="../assets/img/visa.avif" alt="Visa accepted" loading="lazy">
+          <img src="../assets/img/american-express.avif" alt="American Express accepted" loading="lazy">
+          <img src="../assets/img/usps-trusted-partner-direct-mail-service.avif" alt="USPS trusted partner" loading="lazy">
+        </div>
+  </div>
+
+  <div>
+   <h4>SERVICES</h4>
+   <ul>
+    <li><a href="/services/ltl-truckload">LTL and Truckload</a></li>
+    <li><a href="/services/shipping-software-integrations" aria-current="page">Shipping Software and Integrations</a></li>
+    <li><a href="/services/ecommerce-shipping">E-Commerce Shipping</a></li>
+    <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization</a></li>
+   </ul>
+  </div>
+
+  <div>
+   <h4>INDUSTRIES</h4>
+   <ul>
+    <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+    <li><a href="/industries/home-goods">Home Goods</a></li>
+    <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+    <li><a href="/industries/apparel">Apparel</a></li>
+    <li><a href="/industries/medical">Medical</a></li>
+    <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+    <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+    <li><a href="/industries/electronics">Electronics</a></li>
+    <li><a href="/industries/cosmetics">Cosmetics</a></li>
+    <li><a href="/industries/3pl">3PL</a></li>
+   </ul>
+  </div>
+
+  <div>
+   <h4>RESOURCES</h4>
+   <ul>
+    <li><a href="/shipping-calculator">Shipping Cost Calculator</a></li>
+      <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes</a></li>
+    <li><a href="/resources/dimensional-weight">Dimensional Weight</a></li>
+    <li><a href="/resources/additional-handling">Additional Handling</a></li>
+    <li><a href="/resources/international-shipping">International Shipping</a></li>
+   </ul>
+  </div>
+
+  <div>
+   <h4>COMPANY</h4>
+   <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/shipping-scorecard">Shipping Scorecard</a></li>
+    <li><a href="/apply-now">Sign Up</a></li>
+    <li><a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></li>
+    <li><a href="https://meetings.hubspot.com/liftcommercesales2025/meet-with-lift-commerce-sales-2025-biz-dev-cal?uuid=ae7b475a-d107-49e2-9594-d729fb8d8cb8" target="_blank" rel="noopener">Schedule a demo</a></li>
+    <li><a href="https://meetings.hubspot.com/april138/meet-with-lift-commerce-client-services-30-minutes" target="_blank" rel="noopener">Client services session</a></li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="f-bot">
+  <span>&copy; <span id="yr">2026</span> Lift Commerce. All rights reserved.</span>
+  <a href="https://login.liftcommerce.io/ec/terms-of-service">Terms and Conditions</a>
+ </div>
+</div>
+</footer>
+
+<script>
+/* RESPONSIVE HEADER AND DROPDOWN MENUS */
+(function(){
+ var items=[].slice.call(document.querySelectorAll('[data-dd]'));
+ var mobile=function(){return matchMedia('(max-width:1100px)').matches};
+
+ function close(item){
+  item.setAttribute('data-open','false');
+  var button=item.querySelector('.nav-link');
+  button.setAttribute('aria-expanded','false');
+ }
+ function closeAll(exception){
+  items.forEach(function(item){
+   if(item!==exception)close(item);
+  });
+ }
+ items.forEach(function(item){
+  var button=item.querySelector('.nav-link');
+
+  button.addEventListener('click',function(e){
+   e.preventDefault();
+   var isOpen=item.getAttribute('data-open')==='true';
+   closeAll(item);
+   item.setAttribute('data-open',isOpen?'false':'true');
+   button.setAttribute('aria-expanded',isOpen?'false':'true');
+  });
+
+  item.addEventListener('mouseenter',function(){
+   if(mobile())return;
+   closeAll(item);
+   item.setAttribute('data-open','true');
+   button.setAttribute('aria-expanded','true');
+  });
+
+  item.addEventListener('mouseleave',function(){
+   if(!mobile())close(item);
+  });
+ });
+
+ document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')closeAll(null);
+ });
+
+ document.addEventListener('click',function(e){
+  if(!e.target.closest('[data-dd]'))closeAll(null);
+ });
+
+ var burger=document.getElementById('burger');
+ var nav=document.getElementById('nav');
+
+ burger.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  if(!open)closeAll(null);
+ });
+
+ document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+/* 31 INTEGRATIONS — YOUR ACTUAL WIX PAGE LINKS */
+(function(){
+ var SITE='/';
+
+ var PAGE_LINKS={
+  'shift4shop':'/shift4shop-shipping-integration',
+  'amazon':'/amazon-shipping-integration',
+  'big-cartel':'/big-cartel-shipping-integration',
+  'bigcommerce':'/bigcommerce-shipping-integration',
+  'bonanza':'/bonanza-shipping-integration',
+  'cin7':'/cin7-shipping-integration',
+  'cratejoy':'/cratejoy-shipping-integration',
+  'cs-cart':'/cs-cart-shipping-integration',
+  'ebay':'/ebay-shipping-integration',
+  'ecwid':'/ecwid-shipping-integration',
+  'etsy':'/etsy-shipping-integration',
+  'magento':'/magento-shipping-integration',
+  'magento-2':'/magento-2-shipping-integration',
+  'mirakl':'/mirakl-shipping-integration',
+  'netsuite':'/netsuite-shipping-integration',
+  'opencart':'/opencart-shipping-integration',
+  'oscommerce':'/oscommerce-shipping-integration',
+  'paypal':'/paypal-shipping-integration',
+  'prestashop':'/prestashop-shipping-integration',
+  'quickbooks-desktop':'/quickbooks-desktop-shipping-integration',
+  'quickbooks-online':'/quickbooks-online-shipping-integration',
+  'shopify':'/shopify-shipping-integration',
+  'shopping-cart-elite':'/shopping-cart-elite-shipping-integration',
+  'squarespace':'/squarespace-shipping-integration',
+  'squareup':'/squareup-shipping-integration',
+  'steals-network':'/steals-network-shipping-integration',
+  'volusion':'/volusion-shipping-integration',
+  'walmart':'/walmart-shipping-integration',
+  'wix':'/wix-shipping-integration',
+  'woocommerce':'/woocommerce-shipping-integration',
+  'xcart':'/xcart-shipping-integration'
+ };
+
+ var DATA=[
+  ['shift4shop','Shift4Shop',null,'shift4shop.com'],
+  ['amazon','Amazon','amazon','amazon.com'],
+  ['big-cartel','Big Cartel','bigcartel','bigcartel.com'],
+  ['bigcommerce','BigCommerce','bigcommerce','bigcommerce.com'],
+  ['bonanza','Bonanza',null,'bonanza.com'],
+  ['cin7','Cin7',null,'cin7.com'],
+  ['cratejoy','Cratejoy',null,'cratejoy.com'],
+  ['cs-cart','CS-Cart',null,'cs-cart.com'],
+  ['ebay','eBay','ebay','ebay.com'],
+  ['ecwid','Ecwid',null,'ecwid.com'],
+  ['etsy','Etsy','etsy','etsy.com'],
+  ['magento','Magento','magento','magento.com'],
+  ['magento-2','Magento 2','magento','magento.com'],
+  ['mirakl','Mirakl',null,'mirakl.com'],
+  ['netsuite','NetSuite',null,'netsuite.com'],
+  ['opencart','OpenCart',null,'opencart.com'],
+  ['oscommerce','osCommerce',null,'oscommerce.com'],
+  ['paypal','PayPal','paypal','paypal.com'],
+  ['prestashop','PrestaShop','prestashop','prestashop.com'],
+  ['quickbooks-desktop','QuickBooks Desktop',null,'quickbooks.intuit.com'],
+  ['quickbooks-online','QuickBooks Online',null,'quickbooks.intuit.com'],
+  ['shopify','Shopify','shopify','shopify.com'],
+  ['shopping-cart-elite','Shopping Cart Elite',null,'shoppingcartelite.com'],
+  ['squarespace','Squarespace','squarespace','squarespace.com'],
+  ['squareup','SquareUp','square','squareup.com'],
+  ['steals-network','Steals Network',null,'steals.com'],
+  ['volusion','Volusion',null,'volusion.com'],
+  ['walmart','Walmart','walmart','walmart.com'],
+  ['wix','Wix','wix','wix.com'],
+  ['woocommerce','WooCommerce','woocommerce','woocommerce.com'],
+  ['xcart','X-Cart',null,'xcart.com']
+ ];
+
+ var CUSTOM_LOGOS={
+  'magento':'https://www.svgrepo.com/show/475664/magento-color.svg',
+  'magento-2':'https://www.svgrepo.com/show/303592/magento-2-logo.svg',
+  'xcart':'https://www.svgrepo.com/show/354578/xcart.svg'
+ };
+
+ var grid=document.getElementById('igrid');
+ var count=document.getElementById('icount');
+
+ function favicon(domain){
+  return 'https://www.google.com/s2/favicons?domain='+
+   encodeURIComponent(domain)+'&sz=128';
+ }
+
+ function brandIcon(slug){
+  return 'https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/'+
+   encodeURIComponent(slug)+'.svg';
+ }
+
+ DATA.forEach(function(platform){
+  var slug=platform[0];
+  var name=platform[1];
+  var icon=platform[2];
+  var domain=platform[3];
+
+  var card=document.createElement('a');
+  card.className='icell';
+  card.href=PAGE_LINKS[slug]||'/services/shipping-software-integrations';
+  card.setAttribute('aria-label',name+' shipping integration');
+
+  var logo=document.createElement('div');
+  logo.className='integration-logo';
+
+  var img=document.createElement('img');
+  img.alt=name+' logo';
+  img.loading='lazy';
+  img.width=48;
+  img.height=40;
+
+  img.src=CUSTOM_LOGOS[slug]||
+   (icon?brandIcon(icon):favicon(domain));
+
+  img.onerror=function(){
+   if(img.dataset.fallback==='yes'){
+    img.style.display='none';
+    return;
+   }
+   img.dataset.fallback='yes';
+   img.src=favicon(domain);
+  };
+
+  logo.appendChild(img);
+
+  var label=document.createElement('span');
+  label.className='platform-name';
+  label.textContent=name;
+
+  card.appendChild(logo);
+  card.appendChild(label);
+  grid.appendChild(card);
+ });
+
+ count.textContent=DATA.length+' platforms connected';
+})();
+</script>
+
+</body>
+</html>

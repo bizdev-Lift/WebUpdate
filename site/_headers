@@ -1,0 +1,19 @@
+# Cloudflare Pages response headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# Keep the *.pages.dev copy out of search results. It stays live after
+# www.liftcommerce.io is attached, so this rule is permanent, not staging-only.
+# Preview deployments are already noindexed by Cloudflare.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Asset filenames aren't fingerprinted, so cache for a week rather than a year:
+# a replaced image under the same name shows up within 7 days at worst.
+/assets/*
+  Cache-Control: public, max-age=604800

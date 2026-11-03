@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shipping for Apparel and Footwear Brands | Lift Commerce</title>
+<meta name="description" content="Light apparel parcels are governed by minimum charges, not weight breaks. Mail alternatives, zone skipping, returns programmes and multi-carrier automation from Lift Commerce.">
+<link rel="canonical" href="https://www.liftcommerce.io/industries/apparel">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lift Commerce">
+<meta property="og:title" content="Shipping for Apparel and Footwear Brands | Lift Commerce">
+<meta property="og:description" content="Light apparel parcels are governed by minimum charges, not weight breaks. Mail alternatives, zone skipping, returns programmes and multi-carrier automation from Lift Commerce.">
+<meta property="og:url" content="https://www.liftcommerce.io/industries/apparel">
+<meta property="og:image" content="https://www.liftcommerce.io/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lift Commerce: stop overpaying on every box you ship">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233F; --ink-2:#1E3355; --teal:#0088B0; --teal-dk:#006786;
+  --teal-lt:#62C5EE; --tint:#E9F8FF; --amber:#F2A93B;
+  --paper:#fff; --mist:#F5F4F2; --line:#D7D3D3; --body:#444141; --muted:#605D5D;
+  --serif:"Source Serif 4",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --wrap:1180px; --r:2px; --sh:0 2px 4px rgba(45,43,43,.06),0 12px 32px rgba(45,43,43,.16);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;font-family:var(--serif);color:var(--body);
+     background:var(--paper);font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;border:0}
+a{color:var(--teal-dk)}
+a:hover{text-decoration:underline}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);margin:0;line-height:1.12;letter-spacing:-.015em}
+h1{font-size:clamp(2rem,3.7vw,3rem);font-weight:600}
+h2{font-size:clamp(1.55rem,2.8vw,2.2rem);font-weight:600}
+h3{font-size:1.2rem;font-weight:600}
+h4{font-size:1.02rem;font-weight:600}
+p{margin:0 0 1.1rem}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--mono);font-size:.71rem;font-weight:600;letter-spacing:.16em;
+         text-transform:uppercase;color:var(--teal-dk);margin:0 0 .7rem}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.skip:focus{position:fixed;left:16px;top:12px;width:auto;height:auto;clip-path:none;z-index:999;
+  background:var(--teal);color:#fff;padding:10px 18px;border-radius:var(--r);font-weight:600}
+
+/* icon system (inline SVG sprite) */
+.ico{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2;
+     stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:1rem;
+     padding:.8rem 1.5rem;border-radius:var(--r);border:2px solid transparent;text-decoration:none;
+     transition:background .16s,transform .16s,box-shadow .16s}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 4px 14px rgba(0,136,176,.3)}
+.btn-primary:hover{background:var(--teal-dk)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-2)}
+
+/* header */
+.topbar{background:var(--ink);color:#c3ccda;font-size:.82rem;padding:.45rem 0}
+.topbar .wrap{display:flex;justify-content:flex-end;gap:1.6rem;flex-wrap:wrap}
+.topbar a{color:#c3ccda;text-decoration:none}
+.topbar a:hover{color:var(--teal-lt)}
+.site-head{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:1rem;min-height:76px}
+.brand-fallback{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:var(--ink);
+                letter-spacing:-.02em;white-space:nowrap;text-decoration:none}
+.brand-fallback b{color:var(--teal)}
+.nav{margin-left:auto;display:flex;align-items:center;gap:.15rem}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:.3rem;background:none;border:0;padding:.7rem .62rem;
+  font-size:1.02rem;font-family:Arial,Helvetica,sans-serif;font-weight:600;color:var(--ink);
+  border-radius:var(--r);white-space:nowrap;text-decoration:none}
+.nav-link:hover{color:var(--teal-dk);background:var(--tint);text-decoration:none}
+.nav-link.is-cta{background:var(--teal);color:#fff;margin-left:.5rem;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+.nav-link.is-cta:hover{background:var(--teal-dk);color:#fff}
+.nav-link[aria-current="page"]{color:var(--teal-dk);box-shadow:inset 0 -2px 0 var(--teal)}
+.panel a[aria-current="page"]{background:var(--tint);color:var(--teal-dk);font-weight:600}
+.caret{width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+       transform:rotate(45deg) translateY(-2px);transition:transform .18s}
+.nav-item[data-open="true"] .caret{transform:rotate(-135deg) translateY(-2px)}
+.nav-item[data-open="true"] .nav-link{color:var(--teal-dk);background:var(--tint)}
+.panel{position:absolute;top:calc(100% + 8px);left:0;min-width:300px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:.55rem;
+  opacity:0;visibility:hidden;transform:translateY(-8px);list-style:none;margin:0;
+  transition:opacity .18s,transform .18s,visibility .18s}
+.panel.cols{min-width:540px;display:grid;grid-template-columns:1fr 1fr;gap:.1rem}
+.nav-item[data-open="true"] .panel{opacity:1;visibility:visible;transform:translateY(0)}
+.panel a{display:block;padding:.6rem .8rem;border-radius:var(--r);color:var(--ink);
+         font-size:.96rem;line-height:1.35;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+.panel a:hover{background:var(--tint);color:var(--teal-dk)}
+.panel a small{display:block;color:var(--muted);font-size:.8rem;margin-top:.1rem;font-weight:400}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);
+        border-radius:var(--r);padding:.55rem .7rem}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0}
+
+/* page hero */
+.phero{background:linear-gradient(150deg,var(--ink) 0%,var(--ink-2) 70%,#254063 100%);
+       color:#fff;position:relative;overflow:hidden}
+.phero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(135deg,rgba(98,197,238,.06) 0 2px,transparent 2px 22px)}
+.phero-in{position:relative;z-index:2;padding-top:3.4rem;padding-bottom:3rem;display:grid;grid-template-columns:minmax(0,62ch)}
+.phero.split .phero-in{display:grid;grid-template-columns:1.05fr .95fr;
+                       gap:3rem;align-items:center}
+.phero-copy{max-width:56ch}
+.phero-art{margin:0}
+.phero-art svg{display:block;width:100%;height:auto;max-width:540px;margin-left:auto}
+.phero-art text{font-family:var(--serif)}
+.phero-art .m{font-family:var(--mono)}
+.phero h1{color:#fff}
+.phero h1 em{font-style:italic;color:var(--teal-lt);font-weight:400}
+.phero p{color:#c9dced;font-size:1.1rem;margin:1.1rem 0 0}
+.phero .eyebrow{color:var(--teal-lt)}
+.phero-cta{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.8rem}
+.crumb{position:relative;z-index:2;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+       color:#8ba7bf;padding-top:1.4rem}
+.crumb a{color:#8ba7bf;text-decoration:none}
+.crumb a:hover{color:var(--teal-lt)}
+
+/* sections */
+.sec{padding:4rem 0}
+.sec.mist{background:var(--mist)}
+.sec-head{max-width:64ch;margin-bottom:2.2rem}
+.sec-head p{font-size:1.05rem;margin-top:.8rem}
+.prose{max-width:68ch}
+.lede{font-size:1.15rem;color:var(--ink);line-height:1.6}
+
+.grid{display:grid;gap:1.3rem}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;
+      color:var(--body)}
+.card.tealtop{border-top:3px solid var(--teal)}
+.card h3{margin:0 0 .6rem}
+.card p:last-child{margin-bottom:0}
+.card .num{font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--teal);
+           letter-spacing:.08em;display:block;margin-bottom:.5rem}
+.card-art{margin:0 0 1.2rem;background:var(--tint);border-radius:var(--r);overflow:hidden}
+.card-art svg{display:block;width:100%;height:auto}
+.card-art text{font-family:var(--mono)}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:1.1rem;
+          padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:.82rem;
+  font-weight:600;color:var(--teal);padding-top:.28rem}
+.steps h3{margin:0 0 .35rem}
+.steps p{margin:0;font-size:.98rem}
+
+.spec{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1.2rem}
+.spec caption{text-align:left;font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;
+              text-transform:uppercase;color:var(--muted);padding-bottom:.6rem}
+.spec th,.spec td{padding:.7rem .6rem;border-bottom:1px solid var(--line);text-align:left;
+                  vertical-align:top;color:var(--body)}
+.spec thead th{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted);
+               text-transform:uppercase;font-weight:600}
+.spec td.n,.spec th.n{text-align:right;font-family:var(--mono);font-weight:600;color:var(--ink);
+                      white-space:nowrap}
+.spec tbody tr:hover{background:var(--tint)}
+.tbl-scroll{overflow-x:auto}
+.drv{display:flex;align-items:center;gap:.7rem;min-width:170px}
+.drv .ico{width:38px;height:38px;padding:7px;background:var(--tint);color:var(--teal-dk);
+          border-radius:var(--r)}
+
+.callout{background:var(--tint);border-left:3px solid var(--teal);border-radius:0 var(--r) var(--r) 0;
+         padding:1.3rem 1.5rem;margin:1.6rem 0;color:var(--body)}
+.callout p:last-child{margin-bottom:0}
+.callout h3{margin:0 0 .5rem;font-size:1.05rem}
+
+.linkrow{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid var(--line);
+      border-radius:var(--r);padding:.5rem .9rem;font-size:.92rem;color:var(--ink);text-decoration:none}
+.chip:hover{border-color:var(--teal);color:var(--teal-dk);text-decoration:none}
+
+/* product illustrations. To use real photos later, swap the <svg> for <img src="..." alt="..."> */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.6rem}
+.shot{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.shot svg{display:block;width:100%;height:auto;background:var(--tint)}
+.shot svg text{font-family:var(--mono)}
+.shot img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.shot figcaption{padding:1rem 1.2rem 1.25rem;font-size:.94rem;line-height:1.5;color:var(--body);
+                 border-top:3px solid var(--teal)}
+.shot figcaption b{display:block;color:var(--ink);font-size:1.05rem;font-weight:600;margin-bottom:.3rem}
+
+/* savings-lever chart */
+.levfig{margin:0 0 2rem;background:#fff;border:1px solid var(--line);border-radius:var(--r);
+        padding:1.4rem 1.5rem 1.3rem}
+.lv-title{font-weight:600;color:var(--ink);font-size:1.05rem;display:flex;justify-content:space-between;
+          gap:.4rem 1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.lv-title span{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:500;align-self:center}
+.lv-row{display:grid;grid-template-columns:30px 250px 1fr;gap:.8rem;align-items:center;margin-bottom:.7rem}
+.lv-n{font-family:var(--mono);font-weight:600;color:var(--teal-dk);font-size:.85rem}
+.lv-lbl{font-size:.94rem;color:var(--ink);line-height:1.3}
+.lv-track{height:30px;background:var(--mist)}
+.lv-fill{display:block;height:100%;background:var(--teal)}
+.lv-fill.last{background:#8EA2B8}
+.lv-note{margin:1rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-size:.92rem;color:var(--body)}
+
+/* rules flow */
+.flow{display:grid;grid-template-columns:1fr auto 1.25fr auto 1fr;gap:1rem;align-items:center;margin:0 0 2.2rem}
+.flow-col{display:grid;gap:.6rem}
+.flow-h{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--muted);margin:0 0 .15rem}
+.fchip{display:flex;align-items:center;gap:.7rem;background:#fff;border:1px solid var(--line);
+       border-radius:var(--r);padding:.65rem .85rem;font-size:.95rem;color:var(--ink);line-height:1.3;
+       font-weight:600}
+.fchip .ico{width:26px;height:26px;color:var(--teal-dk)}
+.fchip small{display:block;color:var(--muted);font-size:.8rem;font-weight:400;margin-top:.1rem}
+.fchip.out{border-left:3px solid var(--teal)}
+.rules{background:var(--ink);color:#c9dced;border-radius:var(--r);padding:1.3rem 1.4rem 1.1rem;
+       box-shadow:var(--sh)}
+.rules h3{color:#fff;font-size:1.08rem;display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem}
+.rules h3 .ico{color:var(--teal-lt);width:26px;height:26px}
+.rules ul{list-style:none;margin:0;padding:0;font-size:.94rem;line-height:1.4}
+.rules li{padding:.55rem 0 .55rem 1.35rem;border-top:1px solid rgba(255,255,255,.14);position:relative}
+.rules li::before{content:"";position:absolute;left:0;top:1.02rem;width:8px;height:8px;border-radius:50%;
+                  background:var(--teal-lt)}
+.flow-arrow{width:34px;height:34px;color:var(--teal)}
+
+.cta-band{background:var(--teal);padding:3rem 0}
+.cta-in{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.cta-copy{display:flex;align-items:center;gap:2rem}
+.cta-art{flex:none;width:132px;height:auto;transform:rotate(-4deg);
+         filter:drop-shadow(0 10px 16px rgba(10,30,50,.3))}
+.cta-art text{font-family:var(--mono)}
+.cta-in h2{color:#fff;margin:0 0 .4rem}
+.cta-in p{color:#dcf0f8;margin:0;max-width:48ch}
+
+/* footer */
+.site-foot{background:var(--ink);color:#a9c2d6;padding:3.2rem 0 1.5rem;font-size:.92rem}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1.1fr 1fr 1fr;gap:2rem}
+.site-foot h4{color:#fff;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+              margin:0 0 1rem;font-weight:600}
+.site-foot ul{list-style:none;margin:0;padding:0}
+.site-foot li{margin-bottom:.5rem}
+.site-foot a{font-family:Arial,Helvetica,sans-serif;color:#a9c2d6;text-decoration:none}
+.site-foot a:hover{color:var(--teal-lt)}
+.site-foot a[aria-current="page"]{color:#fff}
+.site-foot .brand-fallback{color:#fff}
+.f-nap{font-style:normal;line-height:1.85}
+.f-nap a{color:#fff}
+.f-brand img{height:56px;margin-bottom:1rem}
+.f-pay{display:flex;gap:.7rem;align-items:center;margin-top:1.2rem;flex-wrap:wrap}
+.f-pay img{height:30px;width:auto;opacity:.85;background:#fff;border-radius:4px;padding:3px 5px}
+.f-bot{border-top:1px solid rgba(255,255,255,.13);margin-top:2.4rem;padding-top:1.2rem;
+       display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem}
+
+@media(max-width:1100px){
+  .burger{display:block}
+  .nav{position:fixed;inset:76px 0 auto;background:#fff;flex-direction:column;align-items:stretch;
+    gap:0;padding:.7rem 20px 1.4rem;border-bottom:1px solid var(--line);
+    max-height:calc(100vh - 76px);overflow-y:auto;display:none;box-shadow:var(--sh)}
+  .nav.open{display:flex}
+  .nav-link{width:100%;justify-content:space-between;font-size:1.1rem;padding:.85rem .3rem;
+            border-bottom:1px solid var(--line);border-radius:0}
+  .nav-link.is-cta{margin:.8rem 0 0;justify-content:center;border-bottom:0;border-radius:var(--r)}
+  .panel,.panel.cols{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+    border:0;border-radius:0;min-width:0;padding:.2rem 0 .6rem .8rem;display:none;
+    grid-template-columns:1fr;background:var(--mist)}
+  .nav-item[data-open="true"] .panel{display:block}
+  .nav-item[data-open="true"] .panel.cols{display:grid}
+  .f-grid{grid-template-columns:1fr 1fr 1fr}
+  .f-brand{grid-column:1 / -1}
+}
+@media(max-width:900px){
+  .phero.split .phero-in{grid-template-columns:1fr;gap:2rem}
+  .phero-art svg{margin:0 auto}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:1fr}
+  .shots{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr;gap:.8rem}
+  .flow-arrow{transform:rotate(90deg);margin:0 auto}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .g2,.g4,.shots{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .sec{padding:2.8rem 0}
+  .levfig{padding:1.2rem 1rem 1.1rem}
+  .lv-row{grid-template-columns:24px 1fr;gap:.3rem .6rem}
+  .lv-track{grid-column:1 / -1}
+  .cta-copy{flex-direction:column;align-items:flex-start;gap:1.2rem}
+  .cta-art{width:104px}
+}
+@media(max-width:400px){ .wrap{padding:0 16px} }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;
+  animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.liftcommerce.io/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Apparel",
+     "item": "https://www.liftcommerce.io/industries/apparel"
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "name": "Shipping for Apparel",
+   "serviceType": "Parcel and freight shipping cost reduction",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Apparel businesses"
+   },
+   "provider": {
+    "@type": "Organization",
+    "name": "Lift Commerce",
+    "url": "https://www.liftcommerce.io/",
+    "telephone": "+1-203-601-6208",
+    "email": "Team@LiftCommerce.net",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "55 Post Road West",
+     "addressLocality": "Westport",
+     "addressRegion": "CT",
+     "postalCode": "06880",
+     "addressCountry": "US"
+    }
+   },
+   "areaServed": "US",
+   "url": "https://www.liftcommerce.io/industries/apparel",
+   "description": "Light apparel parcels are governed by minimum charges, not weight breaks. Mail alternatives, zone skipping, returns programmes and multi-carrier automation from Lift Commerce."
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-tag" viewBox="0 0 32 32"><path d="M3 5h13l13 13-10 10L3 15z"/><circle cx="9" cy="11" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="2"/><path d="M3 9l13 9 13-9"/></symbol>
+    <symbol id="i-hop" viewBox="0 0 32 32"><path d="M3 24c3-14 7-14 10 0M13 24c3-14 7-14 10 0"/><circle cx="27" cy="24" r="2"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 32 32"><path d="M5 10l11-6 11 6v12l-11 6-11-6z"/><path d="M5 10l11 6 11-6M16 16v12"/></symbol>
+    <symbol id="i-return" viewBox="0 0 32 32"><path d="M5 13h15a6 6 0 0 1 0 12H9"/><path d="M10 8l-5 5 5 5"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="21" rx="2"/><path d="M4 14h24M10 4v6M22 4v6"/></symbol>
+    <symbol id="i-house" viewBox="0 0 32 32"><path d="M3 15L16 4l13 11"/><path d="M7 13v15h18V13"/><path d="M13 28v-8h6v8"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4.5"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5M7 7l3.5 3.5M21.5 21.5L25 25M25 7l-3.5 3.5M10.5 21.5L7 25"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 32 32"><path d="M3 8h16v14H3zM19 13h6l4 4v5H19z"/><circle cx="9" cy="24" r="2.5"/><circle cx="23" cy="24" r="2.5"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 32 32"><path d="M11 4L3 9l3 5 3-2v16h14V12l3 2 3-5-8-5c-1 3-3 4-5 4s-4-1-5-4z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to main content</a>
+<div class="topbar"><div class="wrap">
+  <a href="tel:+12036016208">P: +1 (203) 601-6208</a>
+  <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a>
+  <a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Client Login</a>
+</div></div>
+
+<header class="site-head"><div class="wrap head-in">
+  <a class="brand-logo" href="/" aria-label="Lift Commerce home">
+    <img alt="Lift Commerce" style="height:46px;width:auto" src="../assets/img/lift-commerce-logo.avif"
+      onerror="this.outerHTML='&lt;span class=\'brand-fallback\'&gt;Lift&lt;b&gt;Commerce&lt;/b&gt;&lt;/span&gt;'">
+  </a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span><span></span></button>
+
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false">Services <i class="caret"></i></button>
+      <ul class="panel">
+        <li><a href="/services/ltl-truckload">LTL and Truckload<small>Pallets, crates and heavy freight</small></a></li>
+        <li><a href="/services/shipping-software-integrations">Shipping Software and Integrations<small>Free multi-carrier platform, 32 connectors</small></a></li>
+        <li><a href="/services/ecommerce-shipping">E-Commerce Shipping<small>Rates, account management, claims support</small></a></li>
+        <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization<small>Invoice audit and agreement negotiation</small></a></li>
+      </ul>
+    </div>
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false" aria-current="page">Industries <i class="caret"></i></button>
+      <ul class="panel cols">
+        <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+        <li><a href="/industries/home-goods">Home Goods</a></li>
+        <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+        <li><a href="/industries/apparel" aria-current="page">Apparel</a></li>
+        <li><a href="/industries/medical">Medical</a></li>
+        <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+        <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+        <li><a href="/industries/electronics">Electronics</a></li>
+        <li><a href="/industries/cosmetics">Cosmetics</a></li>
+        <li><a href="/industries/3pl">3PL</a></li>
+      </ul>
+    </div>
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false">Resources <i class="caret"></i></button>
+      <ul class="panel">
+        <li><a href="/shipping-calculator">Shipping Cost Calculator<small>Price a box with 2026 FedEx rates</small></a></li>
+        <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes<small>Every surcharge that hits an oversize parcel</small></a></li>
+        <li><a href="/resources/dimensional-weight">Dimensional Weight<small>How DIM factors work, with a calculator</small></a></li>
+        <li><a href="/resources/additional-handling">Additional Handling<small>Weight, length, girth and packaging triggers</small></a></li>
+        <li><a href="/resources/international-shipping">International Shipping<small>DDU vs DDP, brokerage and customs</small></a></li>
+      </ul>
+    </div>
+    <div class="nav-item"><a class="nav-link" href="/contact">Contact</a></div>
+    <div class="nav-item"><a class="nav-link" href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></div>
+    <div class="nav-item"><a class="nav-link is-cta" href="/shipping-scorecard">Shipping Scorecard</a></div>
+  </nav>
+</div></header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="phero split">
+<div class="wrap crumb"><a href="/">Home</a> <span aria-hidden="true">/</span> Industries <span aria-hidden="true">/</span> Apparel</div>
+<div class="wrap phero-in">
+  <div class="phero-copy">
+    <p class="eyebrow">Apparel</p>
+    <h1>Light packages, <em>heavy minimum charges.</em></h1>
+    <p>Apparel is the biggest category online and the one where the published rate card fits worst. Most orders weigh under a pound, which means the carrier's minimum charge, not the weight break, is setting your price. The savings here come from mail alternatives and zone skipping, not from a bigger percentage discount.</p>
+    <div class="phero-cta">
+      <a class="btn btn-primary" href="/shipping-scorecard">Get a free rate analysis</a>
+      <a class="btn btn-ghost" href="/contact">Talk to an expert</a>
+    </div>
+  </div>
+
+  <figure class="phero-art">
+    <svg viewBox="0 0 540 400" role="img" aria-label="A 6 ounce poly mailer beside a price chart: a flat minimum charge sits above the discounted weight-based rate, so the discount never applies to a light parcel">
+      <defs>
+        <pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse"><path d="M27 0H0V27" fill="none" stroke="#62C5EE" stroke-opacity=".09" stroke-width="1"/></pattern>
+        <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="4.5" height="9" fill="#F2A93B" fill-opacity=".6"/></pattern>
+      </defs>
+      <rect x="1" y="1" width="538" height="398" rx="3" fill="#fff" fill-opacity=".04" stroke="#62C5EE" stroke-opacity=".28"/>
+      <rect x="1" y="1" width="538" height="398" rx="3" fill="url(#grid)"/>
+
+      <!-- tags -->
+      <rect x="24" y="24" width="250" height="30" rx="2" fill="#0088B0"/>
+      <text x="38" y="44" font-size="14" font-weight="600" fill="#fff">Minimum charge sets the price</text>
+      <rect x="24" y="64" width="278" height="30" rx="2" fill="none" stroke="#62C5EE" stroke-width="1.5"/>
+      <text x="38" y="84" font-size="14" fill="#C9DCED">Discount never reaches a 6 oz parcel</text>
+
+      <!-- poly mailer -->
+      <rect x="44" y="160" width="170" height="124" rx="10" fill="#62C5EE"/>
+      <rect x="44" y="160" width="170" height="26" rx="8" fill="#0088B0"/>
+      <rect x="44" y="176" width="170" height="10" fill="#0088B0"/>
+      <rect x="70" y="208" width="100" height="52" rx="2" fill="#fff"/>
+      <rect x="78" y="216" width="42" height="7" fill="#16233F"/>
+      <rect x="78" y="229" width="76" height="3" fill="#8EA2B8"/><rect x="78" y="236" width="62" height="3" fill="#8EA2B8"/>
+      <g fill="#16233F"><rect x="78" y="244" width="2" height="10"/><rect x="83" y="244" width="4" height="10"/><rect x="90" y="244" width="2" height="10"/><rect x="95" y="244" width="3" height="10"/><rect x="101" y="244" width="2" height="10"/><rect x="106" y="244" width="5" height="10"/><rect x="114" y="244" width="2" height="10"/><rect x="119" y="244" width="3" height="10"/><rect x="125" y="244" width="2" height="10"/><rect x="130" y="244" width="4" height="10"/></g>
+      <path d="M52 196c40-16 90-16 150 0" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+      <rect x="44" y="302" width="76" height="30" rx="2" fill="#fff"/>
+      <text class="m" x="82" y="322" font-size="15" font-weight="600" fill="#16233F" text-anchor="middle">6 oz</text>
+
+      <!-- chart -->
+      <path d="M270 138V330H512" fill="none" stroke="#62C5EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="m" x="276" y="134" font-size="11" fill="#C9DCED">Price</text>
+      <text class="m" x="512" y="350" font-size="11" fill="#C9DCED" text-anchor="end">Weight</text>
+      <polygon points="280,220 409,220 280,320" fill="url(#hatch)"/>
+      <path d="M280 320L409 220" fill="none" stroke="#8EA2B8" stroke-width="2.5" stroke-dasharray="6 5"/>
+      <path d="M280 220H409L500 150" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="m" x="284" y="210" font-size="11" fill="#F2A93B">Minimum charge</text>
+      <text class="m" x="506" y="140" font-size="11" fill="#C9DCED" text-anchor="end">Discounted rate</text>
+      <line x1="300" y1="220" x2="300" y2="330" stroke="#C9DCED" stroke-width="1.8" stroke-dasharray="4 4"/>
+      <circle cx="300" cy="220" r="5.5" fill="#fff" stroke="#16233F" stroke-width="2"/>
+      <text class="m" x="300" y="346" font-size="11" fill="#C9DCED" text-anchor="middle">6 oz</text>
+
+      <text class="m" x="270" y="382" font-size="12" fill="#C9DCED" text-anchor="middle">Mostly under a pound: the minimum charge decides</text>
+    </svg>
+  </figure>
+</div></section>
+
+<!-- THE PRODUCTS -->
+<section class="sec">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">The products</p>
+    <h2>Light, soft, and returned constantly</h2>
+    <p>Almost everything in this catalogue fits a poly mailer, which is both the opportunity and the problem.</p>
+  </div>
+  <div class="shots">
+
+    <figure class="shot">
+      <svg viewBox="0 0 400 300" role="img" aria-label="A T-shirt inside a poly mailer: an order that weighs under a pound">
+        <rect x="136" y="34" width="128" height="26" rx="2" fill="#F2A93B"/>
+        <text x="200" y="52" font-size="13" font-weight="600" fill="#16233F" text-anchor="middle">Under a pound</text>
+        <rect x="70" y="92" width="260" height="156" rx="12" fill="#fff" stroke="#16233F" stroke-width="3"/>
+        <rect x="70" y="92" width="260" height="24" rx="10" fill="#0088B0" stroke="#16233F" stroke-width="3"/>
+        <path d="M148 142L176 128Q200 142 224 128L252 142L240 172L226 164V222H174V164L160 172Z" fill="#62C5EE" stroke="#16233F" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M176 128Q200 150 224 128" fill="none" stroke="#16233F" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="200" y="276" font-size="12" fill="#16233F" text-anchor="middle">Fits a poly mailer</text>
+      </svg>
+      <figcaption><b>Poly-mailer orders</b>T-shirts, knitwear, denim, activewear, underwear, accessories</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <svg viewBox="0 0 400 300" role="img" aria-label="A shipping carton and a boot: outerwear and footwear that need a box rather than a mailer">
+        <rect x="124" y="34" width="152" height="26" rx="2" fill="#F2A93B"/>
+        <text x="200" y="52" font-size="13" font-weight="600" fill="#16233F" text-anchor="middle">Box, not mailer</text>
+        <ellipse cx="200" cy="262" rx="150" ry="7" fill="#16233F" fill-opacity=".12"/>
+        <!-- carton -->
+        <polygon points="40,150 82,126 232,126 190,150" fill="#E8CB9B"/>
+        <polygon points="190,150 232,126 232,226 190,250" fill="#BC945E"/>
+        <rect x="40" y="150" width="150" height="100" fill="#D8B07A"/>
+        <rect x="102" y="150" width="24" height="100" fill="#B98A4E" fill-opacity=".75"/>
+        <polygon points="102,150 126,150 168,126 144,126" fill="#B98A4E" fill-opacity=".7"/>
+        <!-- boot -->
+        <path d="M280 106H312V168L350 184Q364 190 364 206V236H272Z" fill="#7A5434" stroke="#16233F" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="268" y="232" width="100" height="14" rx="3" fill="#16233F"/>
+        <path d="M280 124H312" stroke="#4F361F" stroke-width="3"/>
+        <text x="200" y="284" font-size="12" fill="#16233F" text-anchor="middle">Coats, boots, multi-item orders</text>
+      </svg>
+      <figcaption><b>Boxed and bulky</b>Outerwear, coats, boots, multi-item orders, gift packaging</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <svg viewBox="0 0 400 300" role="img" aria-label="A size M mailer going out and a size L mailer coming back: fit exchanges moving through the network">
+        <rect x="108" y="34" width="184" height="26" rx="2" fill="#F2A93B"/>
+        <text x="200" y="52" font-size="13" font-weight="600" fill="#16233F" text-anchor="middle">Second shipping charge</text>
+        <!-- out mailer -->
+        <rect x="40" y="132" width="104" height="84" rx="8" fill="#62C5EE" stroke="#16233F" stroke-width="2.5"/>
+        <rect x="40" y="132" width="104" height="18" rx="7" fill="#0088B0" stroke="#16233F" stroke-width="2.5"/>
+        <rect x="64" y="162" width="56" height="40" rx="2" fill="#fff"/>
+        <text x="92" y="190" font-size="20" font-weight="600" fill="#16233F" text-anchor="middle">M</text>
+        <!-- back mailer -->
+        <rect x="256" y="132" width="104" height="84" rx="8" fill="#0088B0" stroke="#16233F" stroke-width="2.5"/>
+        <rect x="256" y="132" width="104" height="18" rx="7" fill="#006786" stroke="#16233F" stroke-width="2.5"/>
+        <rect x="280" y="162" width="56" height="40" rx="2" fill="#fff"/>
+        <text x="308" y="190" font-size="20" font-weight="600" fill="#16233F" text-anchor="middle">L</text>
+        <!-- arrows -->
+        <path d="M156 150Q200 108 244 150" fill="none" stroke="#0088B0" stroke-width="3.5" stroke-linecap="round"/>
+        <polygon points="236,140 250,154 232,157" fill="#0088B0"/>
+        <path d="M244 198Q200 240 156 198" fill="none" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="7 6"/>
+        <polygon points="164,208 150,194 168,191" fill="#F2A93B"/>
+        <text x="200" y="278" font-size="12" fill="#16233F" text-anchor="middle">Fit and size exchanges</text>
+      </svg>
+      <figcaption><b>Returns in flight</b>Fit and size exchanges moving back through the network daily</figcaption>
+    </figure>
+
+  </div>
+</div>
+</section>
+
+<!-- THE MARKET -->
+<section class="sec">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">The market</p>
+    <h2>Where this category sits online</h2>
+    <p>Clothing is the most-purchased category online in the US, with roughly 43% of consumers buying apparel online in recent survey data, and footwear close behind. Volume is not the problem in this category. Cost per light parcel is.</p>
+  </div>
+  <div class="grid g3">
+
+    <article class="card tealtop">
+      <div class="card-art"><svg viewBox="0 0 320 116" role="img" aria-label="Roughly 43 percent of US consumers buy apparel online">
+        <circle cx="86" cy="58" r="34" fill="none" stroke="#B7CBD8" stroke-width="14"/>
+        <circle cx="86" cy="58" r="34" fill="none" stroke="#0088B0" stroke-width="14" stroke-dasharray="91.9 213.6" transform="rotate(-90 86 58)"/>
+        <text x="86" y="64" font-size="17" font-weight="600" fill="#16233F" text-anchor="middle">43%</text>
+        <text x="150" y="48" font-size="10" fill="#16233F">of US consumers</text>
+        <text x="150" y="62" font-size="10" fill="#16233F">buy apparel online</text>
+        <text x="150" y="80" font-size="9" fill="#605D5D">Recent survey data</text>
+      </svg></div>
+      <h3>The largest online category</h3><p>Apparel leads US online shopping by participation, which means carriers know exactly how much of your volume they hold.</p>
+    </article>
+
+    <article class="card tealtop">
+      <div class="card-art"><svg viewBox="0 0 320 116" role="img" aria-label="An outbound shipping charge plus a return shipping charge equals two charges">
+        <path d="M24 38H88L106 56L88 74H24Z" fill="#0088B0"/>
+        <circle cx="34" cy="56" r="3.5" fill="#E9F8FF"/>
+        <text x="64" y="61" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">Out</text>
+        <text x="122" y="62" font-size="18" font-weight="600" fill="#16233F" text-anchor="middle">+</text>
+        <path d="M138 38H202L220 56L202 74H138Z" fill="#F2A93B"/>
+        <circle cx="148" cy="56" r="3.5" fill="#E9F8FF"/>
+        <text x="178" y="61" font-size="12" font-weight="600" fill="#16233F" text-anchor="middle">Back</text>
+        <text x="240" y="62" font-size="18" font-weight="600" fill="#16233F" text-anchor="middle">=</text>
+        <text x="278" y="52" font-size="16" font-weight="600" fill="#16233F" text-anchor="middle">2x</text>
+        <text x="278" y="68" font-size="9" fill="#16233F" text-anchor="middle">charges</text>
+        <text x="160" y="104" font-size="9" fill="#605D5D" text-anchor="middle">Fit uncertainty makes returns permanent</text>
+      </svg></div>
+      <h3>Returns are structural</h3><p>Fit uncertainty makes apparel returns a permanent operating cost rather than an exception, and every return is a second shipping charge.</p>
+    </article>
+
+    <article class="card tealtop">
+      <div class="card-art"><svg viewBox="0 0 320 116" role="img" aria-label="Weight scale from 0 to 5 pounds: most orders fall in the first pound, where the minimum charge applies">
+        <path d="M45 40L39 30H51Z" fill="#F2A93B"/>
+        <text x="45" y="24" font-size="9" font-weight="600" fill="#16233F" text-anchor="middle">6 oz</text>
+        <rect x="24" y="44" width="55" height="28" fill="#0088B0"/>
+        <text x="51.5" y="62" font-size="9" fill="#fff" text-anchor="middle">Min.</text>
+        <rect x="81" y="44" width="219" height="28" fill="#B7CBD8"/>
+        <text x="190" y="62" font-size="9" fill="#16233F" text-anchor="middle">Weight-based rates</text>
+        <g stroke="#605D5D" stroke-width="1.5"><path d="M24 76v8M79 76v8M134 76v8M189 76v8M244 76v8M299 76v8"/></g>
+        <g font-size="9" fill="#605D5D" text-anchor="middle"><text x="24" y="97">0</text><text x="79" y="97">1 lb</text><text x="134" y="97">2</text><text x="189" y="97">3</text><text x="244" y="97">4</text><text x="299" y="97">5</text></g>
+      </svg></div>
+      <h3>Under a pound is the norm</h3><p>Most orders sit in the weight band where minimum charges, not weight-based rates, determine what you pay.</p>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- SHIPPING PROFILE -->
+<section class="sec mist">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Shipping profile</p>
+    <h2>What actually drives your invoice</h2>
+    <p>The single most useful thing to understand about apparel shipping is that discounts applied to weight-based rates do very little when the minimum charge catches the package anyway.</p>
+  </div>
+
+  <figure class="levfig" role="group" aria-label="Savings levers ranked by value: minimum charge, then mail and consolidator alternatives, then zone skipping, then a percentage discount on the base rate">
+    <div class="lv-title">Where the savings are <span>Ranked, not to scale</span></div>
+    <div class="lv-row"><span class="lv-n">1</span><div class="lv-lbl">Minimum charge</div><div class="lv-track"><i class="lv-fill" style="width:100%"></i></div></div>
+    <div class="lv-row"><span class="lv-n">2</span><div class="lv-lbl">Mail and consolidator alternatives</div><div class="lv-track"><i class="lv-fill" style="width:76%"></i></div></div>
+    <div class="lv-row"><span class="lv-n">3</span><div class="lv-lbl">Zone skipping</div><div class="lv-track"><i class="lv-fill" style="width:52%"></i></div></div>
+    <div class="lv-row"><span class="lv-n">4</span><div class="lv-lbl">Percentage discount on the base rate</div><div class="lv-track"><i class="lv-fill last" style="width:22%"></i></div></div>
+    <p class="lv-note">The order of value for a sub-pound catalogue. Bar length shows rank, not dollars.</p>
+  </figure>
+
+  <div class="tbl-scroll"><table class="spec">
+    <caption>Cost drivers in this category</caption>
+    <thead><tr><th>Driver</th><th>Why it hits this category</th><th>What controls it</th></tr></thead>
+    <tbody>
+      <tr><td><span class="drv"><svg class="ico" aria-hidden="true"><use href="#i-tag"/></svg><strong>Minimum charge</strong></span></td><td>A heavily discounted rate on a 6 oz package is irrelevant if the minimum charge is higher than the discounted rate.</td><td>Negotiate the minimum charge specifically; it is the number that governs this catalogue</td></tr>
+      <tr><td><span class="drv"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><strong>Mail and alternative carriers</strong></span></td><td>Light parcels are exactly what postal and consolidator networks are built for.</td><td>USPS commercial pricing, regional carriers and consolidators frequently beat national parcel on sub-pound packages</td></tr>
+      <tr><td><span class="drv"><svg class="ico" aria-hidden="true"><use href="#i-hop"/></svg><strong>Zone skipping</strong></span></td><td>Paying zone 7 and 8 rates on every distant order when volume could be injected closer.</td><td>Consolidate and line-haul to a regional injection point, then hand to a local carrier for final delivery</td></tr>
+      <tr><td><span class="drv"><svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg><strong>Dimensional weight</strong></span></td><td>Outerwear, boots and multi-item orders in boxes rather than mailers.</td><td>Mailer-versus-box decisions made per order, not per warehouse habit</td></tr>
+      <tr><td><span class="drv"><svg class="ico" aria-hidden="true"><use href="#i-return"/></svg><strong>Return shipping</strong></span></td><td>Every return is a second movement, usually at retail rates if handled ad hoc.</td><td>Consolidated return programmes and rules-driven return labels</td></tr>
+      <tr><td><span class="drv"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><strong>Peak surcharges</strong></span></td><td>Apparel volume concentrates in exactly the weeks carriers apply peak fees.</td><td>Peak surcharge terms are negotiable and are frequently left at published rates</td></tr>
+      <tr><td><span class="drv"><svg class="ico" aria-hidden="true"><use href="#i-house"/></svg><strong>Residential delivery</strong></span></td><td>Effectively all volume is direct to consumer.</td><td>Built into the offer; alternative carriers often price residential better</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><h3>Three levers, in order of value</h3><p>Minimum charge first, then mail and consolidator alternatives for sub-pound parcels, then zone skipping once volume justifies the line-haul. A percentage discount on the base rate is a distant fourth for this catalogue.</p><div class="linkrow"><a class="chip" href="/services/ecommerce-shipping">E-commerce shipping &rarr;</a><a class="chip" href="/services/carrier-contract-optimization">Carrier contract optimization &rarr;</a><a class="chip" href="/resources/dimensional-weight">Dimensional weight &rarr;</a></div></div>
+</div>
+</section>
+
+<!-- SOFTWARE AND AUTOMATION -->
+<section class="sec">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Software and automation</p>
+    <h2>Rules that pick the right service every time</h2>
+    <p>Rate-shopping every order by hand does not scale, and it is where margin quietly leaks. Lift Commerce webship software connects unlimited stores and marketplaces, compares live rates across carriers on every order, and lets you write automation rules so the cheapest compliant service is chosen without anyone deciding. It is free to use, with no monthly platform fee.</p>
+  </div>
+
+  <div class="flow" role="group" aria-label="Orders come in, Lift Commerce rules decide, and the right service ships">
+    <div class="flow-col">
+      <p class="flow-h">Orders come in</p>
+      <div class="fchip"><svg class="ico" aria-hidden="true"><use href="#i-shirt"/></svg><span>6 oz T-shirt<small>Poly mailer</small></span></div>
+      <div class="fchip"><svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg><span>Winter coat<small>Boxed, 4 lb</small></span></div>
+      <div class="fchip"><svg class="ico" aria-hidden="true"><use href="#i-return"/></svg><span>Size exchange<small>Return in flight</small></span></div>
+    </div>
+    <svg class="ico flow-arrow" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16h21M19 9l7 7-7 7"/></svg>
+    <div class="rules">
+      <h3><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg>Lift Commerce rules</h3>
+      <ul>
+        <li>Rate-shops postal against parcel</li>
+        <li>Picks mailer or box by rule</li>
+        <li>Downgrades service where transit allows</li>
+        <li>Issues return labels automatically</li>
+      </ul>
+    </div>
+    <svg class="ico flow-arrow" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16h21M19 9l7 7-7 7"/></svg>
+    <div class="flow-col">
+      <p class="flow-h">Right service ships</p>
+      <div class="fchip out"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span>Postal or consolidator<small>Sub-pound parcels</small></span></div>
+      <div class="fchip out"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg><span>Parcel carrier<small>Boxed orders</small></span></div>
+      <div class="fchip out"><svg class="ico" aria-hidden="true"><use href="#i-return"/></svg><span>Return label<small>Cheapest compliant service</small></span></div>
+    </div>
+  </div>
+
+  <ol class="steps"><li><div><h3>Rate-shop postal against parcel on every order</h3><p>The cheapest network for a 6 oz mailer and a 4 lb boxed coat are rarely the same carrier. Rules that compare both on every order rather than defaulting to one.</p></div></li><li><div><h3>Mailer versus box, decided by rule</h3><p>Packaging choice driven by contents and dimensional weight, since in this category the box decision often costs more than the carrier decision.</p></div></li><li><div><h3>Service downgrade where transit allows</h3><p>Ground versus expedited chosen by destination zone and promised date, so nearby orders stop riding services they do not need.</p></div></li><li><div><h3>Returns as a standing programme</h3><p>Return labels issued on the cheapest compliant service automatically, with the option to consolidate returns rather than move them one at a time.</p></div></li></ol>
+  <div class="callout">
+    <h3>Where to read more</h3>
+    <p>These pages go deeper on the fees that hit this category hardest.</p>
+    <div class="linkrow"><a class="chip" href="/services/shipping-software-integrations">Shipping software and integrations &rarr;</a><a class="chip" href="/services/ecommerce-shipping">E-commerce shipping &rarr;</a><a class="chip" href="/services/carrier-contract-optimization">Carrier contract optimization &rarr;</a><a class="chip" href="/resources/dimensional-weight">Dimensional weight &rarr;</a></div>
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band"><div class="wrap cta-in">
+  <div class="cta-copy">
+    <svg class="cta-art" viewBox="0 0 150 172" role="img" aria-label="A week of labels where every light parcel is billed the same minimum charge">
+      <rect x="8" y="6" width="134" height="160" rx="3" fill="#fff"/>
+      <rect x="8" y="6" width="134" height="28" rx="3" fill="#16233F"/>
+      <rect x="8" y="22" width="134" height="12" fill="#16233F"/>
+      <text x="20" y="25" font-size="12" font-weight="600" fill="#fff">Labels</text>
+      <rect x="14" y="42" width="122" height="16" fill="#FDE7BE"/>
+      <rect x="22" y="47" width="14" height="6" fill="#C9A15A"/><rect x="96" y="46" width="32" height="8" fill="#B8710A"/>
+      <rect x="14" y="62" width="122" height="16" fill="#FDE7BE"/>
+      <rect x="22" y="67" width="20" height="6" fill="#C9A15A"/><rect x="96" y="66" width="32" height="8" fill="#B8710A"/>
+      <rect x="14" y="82" width="122" height="16" fill="#FDE7BE"/>
+      <rect x="22" y="87" width="12" height="6" fill="#C9A15A"/><rect x="96" y="86" width="32" height="8" fill="#B8710A"/>
+      <rect x="14" y="102" width="122" height="16" fill="#FDE7BE"/>
+      <rect x="22" y="107" width="18" height="6" fill="#C9A15A"/><rect x="96" y="106" width="32" height="8" fill="#B8710A"/>
+      <rect x="22" y="127" width="56" height="6" fill="#C9D2DC"/><rect x="96" y="126" width="32" height="8" fill="#16233F"/>
+      <line x1="20" y1="142" x2="130" y2="142" stroke="#16233F" stroke-width="1.5"/>
+      <rect x="22" y="151" width="30" height="7" fill="#16233F"/><rect x="92" y="151" width="36" height="7" fill="#0088B0"/>
+    </svg>
+    <div><h2>Send us a week of apparel labels.</h2><p>We will show you how many were caught by the minimum charge, what postal and consolidator alternatives would have cost, and whether your volume supports zone skipping.</p></div>
+  </div>
+  <a class="btn btn-dark" href="/shipping-scorecard">Start my scorecard</a>
+</div></section>
+</main>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="f-grid">
+    <div class="f-brand">
+      <a href="/" aria-label="Lift Commerce home">
+          <img alt="Lift Commerce"
+               src="../assets/img/lift-commerce-logo-white.avif">
+        </a>
+      <address class="f-nap">55 Post Road West<br>Westport, CT 06880<br>
+        <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a><br>
+        <a href="tel:+12036016208">+1 (203) 601-6208</a></address>
+        <div class="f-pay">
+          <img src="../assets/img/mastercard.avif" alt="Mastercard accepted" loading="lazy">
+          <img src="../assets/img/visa.avif" alt="Visa accepted" loading="lazy">
+          <img src="../assets/img/american-express.avif" alt="American Express accepted" loading="lazy">
+          <img src="../assets/img/usps-trusted-partner-direct-mail-service.avif" alt="USPS trusted partner" loading="lazy">
+        </div>
+    </div>
+    <div><h4>SERVICES</h4><ul>
+      <li><a href="/services/ltl-truckload">LTL and Truckload</a></li>
+      <li><a href="/services/shipping-software-integrations">Shipping Software and Integrations</a></li>
+      <li><a href="/services/ecommerce-shipping">E-Commerce Shipping</a></li>
+      <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization</a></li>
+    </ul></div>
+    <div><h4>INDUSTRIES</h4><ul>
+      <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+      <li><a href="/industries/home-goods">Home Goods</a></li>
+      <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+      <li><a href="/industries/apparel" aria-current="page">Apparel</a></li>
+      <li><a href="/industries/medical">Medical</a></li>
+      <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+      <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+      <li><a href="/industries/electronics">Electronics</a></li>
+      <li><a href="/industries/cosmetics">Cosmetics</a></li>
+      <li><a href="/industries/3pl">3PL</a></li>
+    </ul></div>
+    <div><h4>RESOURCES</h4><ul>
+      <li><a href="/shipping-calculator">Shipping Cost Calculator</a></li>
+      <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes</a></li>
+      <li><a href="/resources/dimensional-weight">Dimensional Weight</a></li>
+      <li><a href="/resources/additional-handling">Additional Handling</a></li>
+      <li><a href="/resources/international-shipping">International Shipping</a></li>
+    </ul></div>
+    <div><h4>COMPANY</h4><ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/shipping-scorecard">Shipping Scorecard</a></li>
+      <li><a href="/apply-now">Sign Up</a></li>
+      <li><a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></li>
+      <li><a href="https://meetings.hubspot.com/liftcommercesales2025/meet-with-lift-commerce-sales-2025-biz-dev-cal?uuid=ae7b475a-d107-49e2-9594-d729fb8d8cb8" target="_blank" rel="noopener">Schedule a demo</a></li>
+      <li><a href="https://meetings.hubspot.com/april138/meet-with-lift-commerce-client-services-30-minutes" target="_blank" rel="noopener">Client services session</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bot"><span>&copy; <span id="yr">2026</span> Lift Commerce. All rights reserved.</span>
+    <a href="https://login.liftcommerce.io/ec/terms-of-service">Terms and Conditions</a></div>
+</div></footer>
+
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('[data-dd]'));
+  var touch=function(){return window.matchMedia('(max-width:1100px)').matches;};
+  function close(it){it.setAttribute('data-open','false');
+    var b=it.querySelector('.nav-link'); if(b.tagName==='BUTTON') b.setAttribute('aria-expanded','false');}
+  function closeAll(x){items.forEach(function(it){if(it!==x)close(it);});}
+  items.forEach(function(it){
+    var btn=it.querySelector('.nav-link');
+    btn.addEventListener('click',function(e){e.preventDefault();
+      var o=it.getAttribute('data-open')==='true'; closeAll(it);
+      it.setAttribute('data-open',o?'false':'true'); btn.setAttribute('aria-expanded',o?'false':'true');});
+    it.addEventListener('mouseenter',function(){if(touch())return;closeAll(it);
+      it.setAttribute('data-open','true');btn.setAttribute('aria-expanded','true');});
+    it.addEventListener('mouseleave',function(){if(touch())return;close(it);});
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll(null);});
+  document.addEventListener('click',function(e){if(!e.target.closest('[data-dd]'))closeAll(null);});
+  var bg=document.getElementById('burger'),nv=document.getElementById('nav');
+  bg.addEventListener('click',function(){var o=nv.classList.toggle('open');
+    bg.setAttribute('aria-expanded',o?'true':'false'); if(!o)closeAll(null);});
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shipping for Electronics Retailers | Lift Commerce</title>
+<meta name="description" content="High-value electronics need declared value, signature and lithium battery compliance handled by rule. Multi-carrier software, automation rules and negotiated rates from Lift Commerce.">
+<link rel="canonical" href="https://www.liftcommerce.io/industries/electronics">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lift Commerce">
+<meta property="og:title" content="Shipping for Electronics Retailers | Lift Commerce">
+<meta property="og:description" content="High-value electronics need declared value, signature and lithium battery compliance handled by rule. Multi-carrier software, automation rules and negotiated rates from Lift Commerce.">
+<meta property="og:url" content="https://www.liftcommerce.io/industries/electronics">
+<meta property="og:image" content="https://www.liftcommerce.io/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lift Commerce: stop overpaying on every box you ship">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233F; --ink-2:#1E3355; --teal:#0088B0; --teal-dk:#006786;
+  --teal-lt:#62C5EE; --tint:#E9F8FF;
+  --paper:#fff; --mist:#F5F4F2; --line:#D7D3D3; --body:#444141; --muted:#605D5D;
+  --serif:"Source Serif 4",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --wrap:1180px; --r:2px; --sh:0 2px 4px rgba(45,43,43,.06),0 12px 32px rgba(45,43,43,.16);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;font-family:var(--serif);color:var(--body);
+     background:var(--paper);font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;border:0}
+a{color:var(--teal-dk)}
+a:hover{text-decoration:underline}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);margin:0;line-height:1.12;letter-spacing:-.015em}
+h1{font-size:clamp(2rem,3.7vw,3rem);font-weight:600}
+h2{font-size:clamp(1.55rem,2.8vw,2.2rem);font-weight:600}
+h3{font-size:1.2rem;font-weight:600}
+h4{font-size:1.02rem;font-weight:600}
+p{margin:0 0 1.1rem}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--mono);font-size:.71rem;font-weight:600;letter-spacing:.16em;
+         text-transform:uppercase;color:var(--teal-dk);margin:0 0 .7rem}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.skip:focus{position:fixed;left:16px;top:12px;width:auto;height:auto;clip-path:none;z-index:999;
+  background:var(--teal);color:#fff;padding:10px 18px;border-radius:var(--r);font-weight:600}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:1rem;
+     padding:.8rem 1.5rem;border-radius:var(--r);border:2px solid transparent;text-decoration:none;
+     transition:background .16s,transform .16s,box-shadow .16s}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 4px 14px rgba(0,136,176,.3)}
+.btn-primary:hover{background:var(--teal-dk)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-2)}
+
+/* header */
+.topbar{background:var(--ink);color:#c3ccda;font-size:.82rem;padding:.45rem 0}
+.topbar .wrap{display:flex;justify-content:flex-end;gap:1.6rem;flex-wrap:wrap}
+.topbar a{color:#c3ccda;text-decoration:none}
+.topbar a:hover{color:var(--teal-lt)}
+.site-head{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:1rem;min-height:76px}
+.brand-fallback{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:var(--ink);
+                letter-spacing:-.02em;white-space:nowrap;text-decoration:none}
+.brand-fallback b{color:var(--teal)}
+.nav{margin-left:auto;display:flex;align-items:center;gap:.15rem}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:.3rem;background:none;border:0;padding:.7rem .62rem;
+  font-size:1.02rem;font-family:Arial,Helvetica,sans-serif;font-weight:600;color:var(--ink);
+  border-radius:var(--r);white-space:nowrap;text-decoration:none}
+.nav-link:hover{color:var(--teal-dk);background:var(--tint);text-decoration:none}
+.nav-link.is-cta{background:var(--teal);color:#fff;margin-left:.5rem;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+.nav-link.is-cta:hover{background:var(--teal-dk);color:#fff}
+.nav-link[aria-current="page"]{color:var(--teal-dk);box-shadow:inset 0 -2px 0 var(--teal)}
+.panel a[aria-current="page"]{background:var(--tint);color:var(--teal-dk);font-weight:600}
+.caret{width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+       transform:rotate(45deg) translateY(-2px);transition:transform .18s}
+.nav-item[data-open="true"] .caret{transform:rotate(-135deg) translateY(-2px)}
+.nav-item[data-open="true"] .nav-link{color:var(--teal-dk);background:var(--tint)}
+.panel{position:absolute;top:calc(100% + 8px);left:0;min-width:300px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:.55rem;
+  opacity:0;visibility:hidden;transform:translateY(-8px);list-style:none;margin:0;
+  transition:opacity .18s,transform .18s,visibility .18s}
+.panel.cols{min-width:540px;display:grid;grid-template-columns:1fr 1fr;gap:.1rem}
+.nav-item[data-open="true"] .panel{opacity:1;visibility:visible;transform:translateY(0)}
+.panel a{display:block;padding:.6rem .8rem;border-radius:var(--r);color:var(--ink);
+         font-size:.96rem;line-height:1.35;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+.panel a:hover{background:var(--tint);color:var(--teal-dk)}
+.panel a small{display:block;color:var(--muted);font-size:.8rem;margin-top:.1rem;font-weight:400}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);
+        border-radius:var(--r);padding:.55rem .7rem}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0}
+
+/* page hero */
+.phero{background:linear-gradient(150deg,var(--ink) 0%,var(--ink-2) 70%,#254063 100%);
+       color:#fff;position:relative;overflow:hidden}
+.phero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(135deg,rgba(98,197,238,.06) 0 2px,transparent 2px 22px)}
+.phero-in{position:relative;z-index:2;padding-top:3.4rem;padding-bottom:3rem;display:grid;grid-template-columns:minmax(0,62ch)}
+.phero.split .phero-in{display:grid;grid-template-columns:1.1fr .9fr;
+                       gap:3rem;align-items:center}
+.phero h1{color:#fff}
+.phero h1 em{font-style:italic;color:var(--teal-lt);font-weight:400}
+.phero p{color:#c9dced;font-size:1.1rem;margin:1.1rem 0 0}
+.phero .eyebrow{color:var(--teal-lt)}
+.phero-cta{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.8rem}
+.crumb{position:relative;z-index:2;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+       color:#8ba7bf;padding-top:1.4rem}
+.crumb a{color:#8ba7bf;text-decoration:none}
+.crumb a:hover{color:var(--teal-lt)}
+
+/* sections */
+.sec{padding:4rem 0}
+.sec.mist{background:var(--mist)}
+.sec-head{max-width:64ch;margin-bottom:2.2rem}
+.sec-head p{font-size:1.05rem;margin-top:.8rem}
+.prose{max-width:68ch}
+.lede{font-size:1.15rem;color:var(--ink);line-height:1.6}
+
+.grid{display:grid;gap:1.3rem}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;
+      color:var(--body)}
+.card.tealtop{border-top:3px solid var(--teal)}
+.card h3{margin:0 0 .6rem}
+.card p:last-child{margin-bottom:0}
+.card .num{font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--teal);
+           letter-spacing:.08em;display:block;margin-bottom:.5rem}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:1.1rem;
+          padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:.82rem;
+  font-weight:600;color:var(--teal);padding-top:.28rem}
+.steps h3{margin:0 0 .35rem}
+.steps p{margin:0;font-size:.98rem}
+
+.spec{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1.2rem}
+.spec caption{text-align:left;font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;
+              text-transform:uppercase;color:var(--muted);padding-bottom:.6rem}
+.spec th,.spec td{padding:.7rem .6rem;border-bottom:1px solid var(--line);text-align:left;
+                  vertical-align:top;color:var(--body)}
+.spec thead th{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted);
+               text-transform:uppercase;font-weight:600}
+.spec td.n,.spec th.n{text-align:right;font-family:var(--mono);font-weight:600;color:var(--ink);
+                      white-space:nowrap}
+.spec tbody tr:hover{background:var(--tint)}
+.tbl-scroll{overflow-x:auto}
+
+.callout{background:var(--tint);border-left:3px solid var(--teal);border-radius:0 var(--r) var(--r) 0;
+         padding:1.3rem 1.5rem;margin:1.6rem 0;color:var(--body)}
+.callout p:last-child{margin-bottom:0}
+.callout h3{margin:0 0 .5rem;font-size:1.05rem}
+
+.linkrow{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid var(--line);
+      border-radius:var(--r);padding:.5rem .9rem;font-size:.92rem;color:var(--ink);text-decoration:none}
+.chip:hover{border-color:var(--teal);color:var(--teal-dk);text-decoration:none}
+
+/* photo slots — replace the div with <img src="..." alt="..."> when art is supplied */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.6rem}
+.shot{position:relative;aspect-ratio:4/3;border:1px dashed var(--line);border-radius:var(--r);
+  background:var(--mist);display:grid;place-items:center;text-align:center;padding:1rem}
+.shot span{font-family:var(--mono);font-size:.72rem;line-height:1.5;color:var(--muted)}
+.shot span b{display:block;color:var(--ink);font-family:var(--serif);font-size:.95rem;
+             font-weight:600;margin-bottom:.3rem}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+
+.cta-band{background:var(--teal);padding:3rem 0}
+.cta-in{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.cta-in h2{color:#fff;margin:0 0 .4rem}
+.cta-in p{color:#dcf0f8;margin:0;max-width:48ch}
+
+/* footer */
+.site-foot{background:var(--ink);color:#a9c2d6;padding:3.2rem 0 1.5rem;font-size:.92rem}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1.1fr 1fr 1fr;gap:2rem}
+.site-foot h4{color:#fff;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+              margin:0 0 1rem;font-weight:600}
+.site-foot ul{list-style:none;margin:0;padding:0}
+.site-foot li{margin-bottom:.5rem}
+.site-foot a{font-family:Arial,Helvetica,sans-serif;color:#a9c2d6;text-decoration:none}
+.site-foot a:hover{color:var(--teal-lt)}
+.site-foot a[aria-current="page"]{color:#fff}
+.site-foot .brand-fallback{color:#fff}
+.f-nap{font-style:normal;line-height:1.85}
+.f-nap a{color:#fff}
+.f-brand img{height:56px;margin-bottom:1rem}
+.f-pay{display:flex;gap:.7rem;align-items:center;margin-top:1.2rem;flex-wrap:wrap}
+.f-pay img{height:30px;width:auto;opacity:.85;background:#fff;border-radius:4px;padding:3px 5px}
+.f-bot{border-top:1px solid rgba(255,255,255,.13);margin-top:2.4rem;padding-top:1.2rem;
+       display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem}
+
+@media(max-width:1100px){
+  .burger{display:block}
+  .nav{position:fixed;inset:76px 0 auto;background:#fff;flex-direction:column;align-items:stretch;
+    gap:0;padding:.7rem 20px 1.4rem;border-bottom:1px solid var(--line);
+    max-height:calc(100vh - 76px);overflow-y:auto;display:none;box-shadow:var(--sh)}
+  .nav.open{display:flex}
+  .nav-link{width:100%;justify-content:space-between;font-size:1.1rem;padding:.85rem .3rem;
+            border-bottom:1px solid var(--line);border-radius:0}
+  .nav-link.is-cta{margin:.8rem 0 0;justify-content:center;border-bottom:0;border-radius:var(--r)}
+  .panel,.panel.cols{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+    border:0;border-radius:0;min-width:0;padding:.2rem 0 .6rem .8rem;display:none;
+    grid-template-columns:1fr;background:var(--mist)}
+  .nav-item[data-open="true"] .panel{display:block}
+  .nav-item[data-open="true"] .panel.cols{display:grid}
+  .f-grid{grid-template-columns:1fr 1fr 1fr}
+  .f-brand{grid-column:1 / -1}
+}
+@media(max-width:900px){
+  .phero.split .phero-in{grid-template-columns:1fr;gap:2rem}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .g2,.g4,.shots{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .sec{padding:2.8rem 0}
+}
+@media(max-width:400px){ .wrap{padding:0 16px} }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;
+  animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.liftcommerce.io/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Electronics",
+     "item": "https://www.liftcommerce.io/industries/electronics"
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "name": "Shipping for Electronics",
+   "serviceType": "Parcel and freight shipping cost reduction",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Electronics businesses"
+   },
+   "provider": {
+    "@type": "Organization",
+    "name": "Lift Commerce",
+    "url": "https://www.liftcommerce.io/",
+    "telephone": "+1-203-601-6208",
+    "email": "Team@LiftCommerce.net",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "55 Post Road West",
+     "addressLocality": "Westport",
+     "addressRegion": "CT",
+     "postalCode": "06880",
+     "addressCountry": "US"
+    }
+   },
+   "areaServed": "US",
+   "url": "https://www.liftcommerce.io/industries/electronics",
+   "description": "High-value electronics need declared value, signature and lithium battery compliance handled by rule. Multi-carrier software, automation rules and negotiated rates from Lift Commerce."
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="topbar"><div class="wrap">
+  <a href="tel:+12036016208">P: +1 (203) 601-6208</a>
+  <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a>
+  <a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Client Login</a>
+</div></div>
+
+<header class="site-head"><div class="wrap head-in">
+  <a class="brand-logo" href="/" aria-label="Lift Commerce home">
+    <img alt="Lift Commerce" style="height:46px;width:auto" src="../assets/img/lift-commerce-logo.avif"
+      onerror="this.outerHTML='&lt;span class=\'brand-fallback\'&gt;Lift&lt;b&gt;Commerce&lt;/b&gt;&lt;/span&gt;'">
+  </a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span><span></span></button>
+
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false">Services <i class="caret"></i></button>
+      <ul class="panel">
+        <li><a href="/services/ltl-truckload">LTL and Truckload<small>Pallets, crates and heavy freight</small></a></li>
+        <li><a href="/services/shipping-software-integrations">Shipping Software and Integrations<small>Free multi-carrier platform, 32 connectors</small></a></li>
+        <li><a href="/services/ecommerce-shipping">E-Commerce Shipping<small>Rates, account management, claims support</small></a></li>
+        <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization<small>Invoice audit and agreement negotiation</small></a></li>
+      </ul>
+    </div>
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false" aria-current="page">Industries <i class="caret"></i></button>
+      <ul class="panel cols">
+        <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+        <li><a href="/industries/home-goods">Home Goods</a></li>
+        <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+        <li><a href="/industries/apparel">Apparel</a></li>
+        <li><a href="/industries/medical">Medical</a></li>
+        <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+        <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+        <li><a href="/industries/electronics" aria-current="page">Electronics</a></li>
+        <li><a href="/industries/cosmetics">Cosmetics</a></li>
+        <li><a href="/industries/3pl">3PL</a></li>
+      </ul>
+    </div>
+    <div class="nav-item" data-dd>
+      <button class="nav-link" aria-expanded="false">Resources <i class="caret"></i></button>
+      <ul class="panel">
+        <li><a href="/shipping-calculator">Shipping Cost Calculator<small>Price a box with 2026 FedEx rates</small></a></li>
+        <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes<small>Every surcharge that hits an oversize parcel</small></a></li>
+        <li><a href="/resources/dimensional-weight">Dimensional Weight<small>How DIM factors work, with a calculator</small></a></li>
+        <li><a href="/resources/additional-handling">Additional Handling<small>Weight, length, girth and packaging triggers</small></a></li>
+        <li><a href="/resources/international-shipping">International Shipping<small>DDU vs DDP, brokerage and customs</small></a></li>
+      </ul>
+    </div>
+    <div class="nav-item"><a class="nav-link" href="/contact">Contact</a></div>
+    <div class="nav-item"><a class="nav-link" href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></div>
+    <div class="nav-item"><a class="nav-link is-cta" href="/shipping-scorecard">Shipping Scorecard</a></div>
+  </nav>
+</div></header>
+
+<main id="main">
+<section class="phero">
+<div class="wrap crumb"><a href="/">Home</a> <span aria-hidden="true">/</span> Industries <span aria-hidden="true">/</span> Electronics</div>
+<div class="wrap phero-in">
+  <p class="eyebrow">Electronics</p>
+  <h1>High value, fragile, and <em>full of regulated batteries.</em></h1>
+  <p>Electronics is one of the largest categories online and one of the few where the shipment is worth more than the shipping decision that carries it. Declared value, signature requirements and lithium battery rules matter here in a way they do not anywhere else.</p>
+  <div class="phero-cta">
+    <a class="btn btn-primary" href="/shipping-scorecard">Get a free rate analysis</a>
+    <a class="btn btn-ghost" href="/contact">Talk to an expert</a>
+  </div>
+</div></section>
+
+<section class="sec">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">The products</p>
+    <h2>Three risk profiles in one catalogue</h2>
+    <p>The cost driver changes completely depending on which of these an order contains.</p>
+  </div>
+  <div class="shots"><div class="shot"><span><b>Large and fragile</b>Monitors, televisions, all-in-one desktops, printers, speakers</span></div><div class="shot"><span><b>High value, compact</b>Laptops, phones, tablets, cameras, GPUs and components</span></div><div class="shot"><span><b>Small accessories</b>Cables, chargers, adapters, cases, peripherals, memory</span></div></div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">The market</p>
+    <h2>Where this category sits online</h2>
+    <p>Computer and consumer electronics is consistently among the largest US e-commerce categories by sales, and one of the few where more than half of category sales already happen online. That maturity means the shipping expectations are set and the margins are thin.</p>
+  </div>
+  <div class="grid g3"><article class="card tealtop"><h3>Majority of sales already online</h3><p>Electronics has one of the highest online penetration rates of any retail category, so shipping cost is a permanent line item rather than a growing one.</p></article><article class="card tealtop"><h3>Value concentration</h3><p>A single carton can carry more value than a pallet of most other categories, which changes the maths on declared value, signature and insurance.</p></article><article class="card tealtop"><h3>Theft and loss exposure</h3><p>High-value, easily resold goods attract porch theft and in-transit loss, and claims in this category get scrutinised harder than most.</p></article></div>
+</div>
+</section>
+
+<section class="sec mist">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Shipping profile</p>
+    <h2>What actually drives your invoice</h2>
+    <p>In most categories the shipping decision is about cost. Here it is about cost and risk together, and the risk side is usually the one being managed badly.</p>
+  </div>
+  <div class="tbl-scroll"><table class="spec">
+    <caption>Cost drivers in this category</caption>
+    <thead><tr><th>Driver</th><th>Why it hits this category</th><th>What controls it</th></tr></thead>
+    <tbody><tr><td><strong>Declared value and insurance</strong></td><td>Carriers include only limited liability by default. Above that, every dollar of declared value is charged.</td><td>Decide per order value band whether carrier declared value or third-party cargo cover is cheaper &mdash; at volume it is usually the latter</td></tr><tr><td><strong>Signature requirements</strong></td><td>Adult or direct signature protects against porch theft but costs per shipment.</td><td>Rules that apply signature above a value threshold rather than on everything</td></tr><tr><td><strong>Lithium batteries</strong></td><td>Loose cells, power banks and battery-equipped devices are regulated dangerous goods with their own packaging, labelling and service restrictions.</td><td>Correct UN classification and packing instruction per SKU; not every service accepts every configuration</td></tr><tr><td><strong>Dimensional weight</strong></td><td>Television and monitor cartons are large and comparatively light.</td><td>A better DIM divisor materially reduces billable weight across display SKUs</td></tr><tr><td><strong>Additional handling &mdash; length</strong></td><td>Large-format displays exceed 48 in on the longest side.</td><td>Negotiated accessorial discounts; check where the parcel-to-freight line sits</td></tr><tr><td><strong>Damage claims</strong></td><td>Panels, glass and precision components are unforgiving of handling.</td><td>Documented packaging standards; claims in this category fail on evidence more than merit</td></tr><tr><td><strong>Return rate</strong></td><td>Compatibility and buyer's remorse both drive returns on high-value items.</td><td>Return routing by value band, with the same signature and insurance logic applied</td></tr></tbody>
+  </table></div>
+  <div class="callout"><h3>Batteries are the compliance risk, value is the cost risk</h3><p>Getting a lithium classification wrong can ground a shipment or void a claim. Paying declared value on every order when a cargo policy would cost a fraction is the quieter, more expensive mistake.</p><div class="linkrow"><a class="chip" href="/resources/dimensional-weight">Dimensional weight &rarr;</a><a class="chip" href="/resources/additional-handling">Additional handling &rarr;</a><a class="chip" href="/services/ecommerce-shipping">E-commerce shipping &rarr;</a><a class="chip" href="/resources/international-shipping">International shipping &rarr;</a></div></div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Software and automation</p>
+    <h2>Rules that pick the right service every time</h2>
+    <p>Rate-shopping every order by hand does not scale, and it is where margin quietly leaks. Lift Commerce webship software connects unlimited stores and marketplaces, compares live rates across carriers on every order, and lets you write automation rules so the cheapest compliant service is chosen without anyone deciding. It is free to use, with no monthly platform fee.</p>
+  </div>
+  <ol class="steps"><li><div><h3>Value-band rules</h3><p>Signature, declared value and carrier selection driven by order value automatically, so a $40 cable and a $3,000 laptop are never treated the same way.</p></div></li><li><div><h3>Battery-aware routing</h3><p>SKUs flagged with lithium content routed only to compliant services, with the correct labelling produced at print time rather than remembered by a packer.</p></div></li><li><div><h3>Split shipping for mixed carts</h3><p>When a cart mixes a monitor with accessories, rules that decide whether one large surcharged carton or two smaller ones is cheaper.</p></div></li><li><div><h3>Tracking pushed back to the customer</h3><p>High-value orders generate the most where-is-my-order contacts. Writing tracking back to the store cuts the support load before it starts.</p></div></li></ol>
+  <div class="callout">
+    <h3>Where to read more</h3>
+    <p>These pages go deeper on the fees that hit this category hardest.</p>
+    <div class="linkrow"><a class="chip" href="/services/shipping-software-integrations">Shipping software and integrations &rarr;</a><a class="chip" href="/resources/dimensional-weight">Dimensional weight &rarr;</a><a class="chip" href="/resources/additional-handling">Additional handling &rarr;</a><a class="chip" href="/services/ecommerce-shipping">E-commerce shipping &rarr;</a><a class="chip" href="/resources/international-shipping">International shipping &rarr;</a></div>
+  </div>
+</div>
+</section>
+
+<section class="cta-band"><div class="wrap cta-in">
+  <div><h2>Send us a month of electronics invoices.</h2><p>We will show you what declared value and signature are costing across your order mix, and whether your battery SKUs are on the right services.</p></div>
+  <a class="btn btn-dark" href="/shipping-scorecard">Start my scorecard</a>
+</div></section>
+</main>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="f-grid">
+    <div class="f-brand">
+      <a href="/" aria-label="Lift Commerce home">
+          <img alt="Lift Commerce"
+               src="../assets/img/lift-commerce-logo-white.avif">
+        </a>
+      <address class="f-nap">55 Post Road West<br>Westport, CT 06880<br>
+        <a href="mailto:Team@LiftCommerce.net">Team@LiftCommerce.net</a><br>
+        <a href="tel:+12036016208">+1 (203) 601-6208</a></address>
+        <div class="f-pay">
+          <img src="../assets/img/mastercard.avif" alt="Mastercard accepted" loading="lazy">
+          <img src="../assets/img/visa.avif" alt="Visa accepted" loading="lazy">
+          <img src="../assets/img/american-express.avif" alt="American Express accepted" loading="lazy">
+          <img src="../assets/img/usps-trusted-partner-direct-mail-service.avif" alt="USPS trusted partner" loading="lazy">
+        </div>
+    </div>
+    <div><h4>SERVICES</h4><ul>
+      <li><a href="/services/ltl-truckload">LTL and Truckload</a></li>
+      <li><a href="/services/shipping-software-integrations">Shipping Software and Integrations</a></li>
+      <li><a href="/services/ecommerce-shipping">E-Commerce Shipping</a></li>
+      <li><a href="/services/carrier-contract-optimization">Carrier Contract Optimization</a></li>
+    </ul></div>
+    <div><h4>INDUSTRIES</h4><ul>
+      <li><a href="/industries/sporting-goods-outdoor">Sporting Goods and Outdoor</a></li>
+      <li><a href="/industries/home-goods">Home Goods</a></li>
+      <li><a href="/industries/food-beverage">Food and Beverage</a></li>
+      <li><a href="/industries/apparel">Apparel</a></li>
+      <li><a href="/industries/medical">Medical</a></li>
+      <li><a href="/industries/aftermarket-auto-parts">Aftermarket Auto Parts</a></li>
+      <li><a href="/industries/industrial-manufacturing">Industrial and Manufacturing</a></li>
+      <li><a href="/industries/electronics" aria-current="page">Electronics</a></li>
+      <li><a href="/industries/cosmetics">Cosmetics</a></li>
+      <li><a href="/industries/3pl">3PL</a></li>
+    </ul></div>
+    <div><h4>RESOURCES</h4><ul>
+      <li><a href="/shipping-calculator">Shipping Cost Calculator</a></li>
+      <li><a href="/resources/shipping-large-boxes">Shipping Large Boxes</a></li>
+      <li><a href="/resources/dimensional-weight">Dimensional Weight</a></li>
+      <li><a href="/resources/additional-handling">Additional Handling</a></li>
+      <li><a href="/resources/international-shipping">International Shipping</a></li>
+    </ul></div>
+    <div><h4>COMPANY</h4><ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/shipping-scorecard">Shipping Scorecard</a></li>
+      <li><a href="/apply-now">Sign Up</a></li>
+      <li><a href="https://login.liftcommerce.io/ec/login.php?redirectTo=%2Fec%2F">Login</a></li>
+      <li><a href="https://meetings.hubspot.com/liftcommercesales2025/meet-with-lift-commerce-sales-2025-biz-dev-cal?uuid=ae7b475a-d107-49e2-9594-d729fb8d8cb8" target="_blank" rel="noopener">Schedule a demo</a></li>
+      <li><a href="https://meetings.hubspot.com/april138/meet-with-lift-commerce-client-services-30-minutes" target="_blank" rel="noopener">Client services session</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bot"><span>&copy; <span id="yr">2026</span> Lift Commerce. All rights reserved.</span>
+    <a href="https://login.liftcommerce.io/ec/terms-of-service">Terms and Conditions</a></div>
+</div></footer>
+
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('[data-dd]'));
+  var touch=function(){return window.matchMedia('(max-width:1100px)').matches;};
+  function close(it){it.setAttribute('data-open','false');
+    var b=it.querySelector('.nav-link'); if(b.tagName==='BUTTON') b.setAttribute('aria-expanded','false');}
+  function closeAll(x){items.forEach(function(it){if(it!==x)close(it);});}
+  items.forEach(function(it){
+    var btn=it.querySelector('.nav-link');
+    btn.addEventListener('click',function(e){e.preventDefault();
+      var o=it.getAttribute('data-open')==='true'; closeAll(it);
+      it.setAttribute('data-open',o?'false':'true'); btn.setAttribute('aria-expanded',o?'false':'true');});
+    it.addEventListener('mouseenter',function(){if(touch())return;closeAll(it);
+      it.setAttribute('data-open','true');btn.setAttribute('aria-expanded','true');});
+    it.addEventListener('mouseleave',function(){if(touch())return;close(it);});
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll(null);});
+  document.addEventListener('click',function(e){if(!e.target.closest('[data-dd]'))closeAll(null);});
+  var bg=document.getElementById('burger'),nv=document.getElementById('nav');
+  bg.addEventListener('click',function(){var o=nv.classList.toggle('open');
+    bg.setAttribute('aria-expanded',o?'true':'false'); if(!o)closeAll(null);});
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
